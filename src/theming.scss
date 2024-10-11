@@ -1,0 +1,69 @@
+@use "@angular/material" as mat;
+@use "palette.scss" as palette;
+
+@include mat.core();
+
+$sac-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(palette.$primary, 100),
+      accent: mat.define-palette(palette.$accent),
+      warn: mat.define-palette(palette.$warn),
+      secondary: mat.define-palette(palette.$secondary), 
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+@include mat.all-component-themes($sac-theme);
+
+:root {
+  // Variáveis para primary
+  @each $name, $value in palette.$primary {
+    @if ($name != "contrast") {
+      --core-primary-#{$name}: #{$value};
+    } @else {
+      $contrast-palette: map-get(palette.$primary, "contrast");
+      @each $name, $value in $contrast-palette {
+        --core-primary-contrast-#{$name}: #{$value};
+      }
+    }
+  }
+
+  // Variáveis para accent
+  @each $name, $value in palette.$accent {
+    @if ($name != "contrast") {
+      --core-accent-#{$name}: #{$value};
+    } @else {
+      $contrast-palette: map-get(palette.$accent, "contrast");
+      @each $name, $value in $contrast-palette {
+        --core-accent-contrast-#{$name}: #{$value};
+      }
+    }
+  }
+
+  // Variáveis para secondary
+  @each $name, $value in palette.$secondary {
+    @if ($name != "contrast") {
+      --core-secondary-#{$name}: #{$value};
+    } @else {
+      $contrast-palette: map-get(palette.$secondary, "contrast");
+      @each $name, $value in $contrast-palette {
+        --core-secondary-contrast-#{$name}: #{$value};
+      }
+    }
+  }
+
+  // Variáveis para warn
+  @each $name, $value in palette.$warn {
+    @if ($name != "contrast") {
+      --core-warn-#{$name}: #{$value};
+    } @else {
+      $contrast-palette: map-get(palette.$warn, "contrast");
+      @each $name, $value in $contrast-palette {
+        --core-warn-contrast-#{$name}: #{$value};
+      }
+    }
+  }
+}

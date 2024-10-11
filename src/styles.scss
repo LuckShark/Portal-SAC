@@ -1,8 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-
+/*Imports do tailwind*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*Imports dos arquivos de theme*/
+@import 'palette.scss';
+@import 'theming.scss';
 
 
 
