@@ -5,11 +5,12 @@ import { FooterSaudeComponent } from "../../../components/footer-saude/footer-sa
 import { GalleryServicesClinicComponent } from "../gallery-services-clinic/gallery-services-clinic.component";
 import { PartnersComponent } from "../partners/partners.component";
 import { BlogClinicComponent } from "../blog-clinic/blog-clinic.component";
+import { ContactClinicComponent } from "../contact-clinic/contact-clinic.component";
 
 @Component({
   selector: 'app-home-clinic',
   standalone: true,
-  imports: [HeaderSaudeComponent, HeroHomeClinicComponent, FooterSaudeComponent, GalleryServicesClinicComponent, PartnersComponent, BlogClinicComponent],
+  imports: [HeaderSaudeComponent, HeroHomeClinicComponent, FooterSaudeComponent, GalleryServicesClinicComponent, PartnersComponent, BlogClinicComponent, ContactClinicComponent],
   templateUrl: './home-clinic.component.html',
   styleUrl: './home-clinic.component.scss'
 })
