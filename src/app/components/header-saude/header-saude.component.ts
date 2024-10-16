@@ -1,24 +1,19 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
+import { NavegacaoService } from '../../services/navegacao.service';
 
 @Component({
   selector: 'app-header-saude',
   standalone: true,
-  imports: [
-    MatMenuModule,
-    MatButtonModule
-  ],
+  imports: [],
   templateUrl: './header-saude.component.html',
   styleUrl: './header-saude.component.scss'
 })
 export class HeaderSaudeComponent {
 
-  constructor(private router: Router) {}
+  constructor(private navegacaoService: NavegacaoService) {}
 
   navegar(rota: string) {
-    this.router.navigate([`${rota}`])
+    this.navegacaoService.navegarParaRota(rota);
   }
 
 }
