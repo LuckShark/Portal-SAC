@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavegacaoService } from '../../../../services/navegacao.service';
 
 @Component({
   selector: 'app-galeria-exames',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './galeria-exames.component.scss'
 })
 export class GaleriaExamesComponent {
+
+  constructor(private navegacaoService: NavegacaoService) {}
+
+  navegar(rota: string) {
+    this.navegacaoService.navegarParaRota(rota);
+  }
 
 }
