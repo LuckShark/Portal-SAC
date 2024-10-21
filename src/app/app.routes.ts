@@ -4,6 +4,7 @@ import { HomeClinicComponent } from './pages/clinic-pages/home-clinic/home-clini
 import { HomeSocialComponent } from './pages/school-pages/home-social/home-social.component';
 import { HomeConsultasComponent } from './pages/clinic-pages/home-consultas/home-consultas.component';
 import { HomeExamesComponent } from './pages/clinic-pages/home-exames/home-exames.component';
+import { Exame1AcuidadeVisualComponent } from './pages/clinic-pages/home-exames/todosExames/exame1-acuidade-visual/exame1-acuidade-visual.component';
 
 export const routes: Routes = [
     {
@@ -25,6 +26,10 @@ export const routes: Routes = [
     {
         path: 'exames',
         component: HomeExamesComponent
+    },
+    {
+        path: 'acuidade-visual',
+        component: Exame1AcuidadeVisualComponent
     },
     { path: '**', component: HomeComponent },
 ];
