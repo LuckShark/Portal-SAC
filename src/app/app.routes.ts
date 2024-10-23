@@ -5,6 +5,7 @@ import { HomeSocialComponent } from './pages/school-pages/home-social/home-socia
 import { HomeConsultasComponent } from './pages/clinic-pages/home-consultas/home-consultas.component';
 import { HomeExamesComponent } from './pages/clinic-pages/home-exames/home-exames.component';
 import { Exame1AcuidadeVisualComponent } from './pages/clinic-pages/home-exames/todosExames/exame1-acuidade-visual/exame1-acuidade-visual.component';
+import { HomeFaqComponent } from './pages/clinic-pages/home-faq/home-faq.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,10 @@ export const routes: Routes = [
     {
         path: 'clinica',
         component: HomeClinicComponent,
+    },
+    {
+        path: 'faq',
+        component: HomeFaqComponent
     },
     {
         path: 'social',
