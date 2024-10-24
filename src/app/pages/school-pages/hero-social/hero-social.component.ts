@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero-social',
@@ -9,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class HeroSocialComponent {
 
+  constructor(private router: Router) {}
+
+  navegar(rota: string) {
+    this.router.navigate([`${rota}`])
+
+  }
 }
