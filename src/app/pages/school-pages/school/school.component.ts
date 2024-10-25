@@ -4,11 +4,12 @@ import { FooterSocialComponent } from "../../../components/footer-social/footer-
 import { HeroSchoolComponent } from "./hero-school/hero-school.component";
 import { FeaturesSchoolComponent } from "./features-school/features-school.component";
 import { FeaturesListImagesSchoolComponent } from "./features-list-images-school/features-list-images-school.component";
+import { SliderSectionComponent } from "./slider-section/slider-section.component";
 
 @Component({
   selector: 'app-school',
   standalone: true,
-  imports: [HeaderSocialComponent, FooterSocialComponent, HeroSchoolComponent, FeaturesSchoolComponent, FeaturesListImagesSchoolComponent],
+  imports: [HeaderSocialComponent, FooterSocialComponent, HeroSchoolComponent, FeaturesSchoolComponent, FeaturesListImagesSchoolComponent, SliderSectionComponent],
   templateUrl: './school.component.html',
   styleUrl: './school.component.scss'
 })
