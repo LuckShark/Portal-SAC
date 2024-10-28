@@ -7,11 +7,12 @@ import { PartnersComponent } from "../partners/partners.component";
 import { BlogClinicComponent } from "../blog-clinic/blog-clinic.component";
 import { ContactClinicComponent } from "../contact-clinic/contact-clinic.component";
 import { GalleryClinicComponent } from "../gallery-clinic/gallery-clinic.component";
+import { InstagramClinicComponent } from '../instagram-clinic/instagram-clinic.component';
 
 @Component({
   selector: 'app-home-clinic',
   standalone: true,
-  imports: [HeaderSaudeComponent, HeroHomeClinicComponent, FooterSaudeComponent, GalleryServicesClinicComponent, PartnersComponent, BlogClinicComponent, ContactClinicComponent, GalleryClinicComponent],
+  imports: [HeaderSaudeComponent, HeroHomeClinicComponent, FooterSaudeComponent, GalleryServicesClinicComponent, PartnersComponent, BlogClinicComponent, ContactClinicComponent, GalleryClinicComponent, InstagramClinicComponent],
   templateUrl: './home-clinic.component.html',
   styleUrl: './home-clinic.component.scss'
 })
