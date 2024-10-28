@@ -8,6 +8,7 @@ import { Exame1AcuidadeVisualComponent } from './pages/clinic-pages/home-exames/
 import { HomeFaqComponent } from './pages/clinic-pages/home-faq/home-faq.component';
 import { SchoolComponent } from './pages/school-pages/school/school.component';
 import { HomeCirurgiasComponent } from './pages/clinic-pages/home-cirurgias/home-cirurgias.component';
+import { ProjetosComponent } from './pages/school-pages/projetos/projetos.component';
 
 export const routes: Routes = [
     {
@@ -29,6 +30,10 @@ export const routes: Routes = [
     {
         path: 'escola',
         component: SchoolComponent
+    },
+    {
+        path: 'projetos',
+        component: ProjetosComponent
     },
     {
         path: 'consultas',
