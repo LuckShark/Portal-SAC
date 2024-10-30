@@ -9,6 +9,7 @@ import { HomeFaqComponent } from './pages/clinic-pages/home-faq/home-faq.compone
 import { SchoolComponent } from './pages/school-pages/school/school.component';
 import { HomeCirurgiasComponent } from './pages/clinic-pages/home-cirurgias/home-cirurgias.component';
 import { ProjetosComponent } from './pages/school-pages/projetos/projetos.component';
+import { Cirurgia1ImplanteAnelComponent } from './pages/clinic-pages/home-cirurgias/todasCirurgias/cirurgia1-implante-anel/cirurgia1-implante-anel.component';
 
 export const routes: Routes = [
     {
@@ -50,6 +51,10 @@ export const routes: Routes = [
     {
         path: 'cirurgias',
         component: HomeCirurgiasComponent
+    },
+    {
+        path: 'cirurgia1-implante-anel',
+        component: Cirurgia1ImplanteAnelComponent
     },
     { path: '**', component: HomeComponent },
 ];
