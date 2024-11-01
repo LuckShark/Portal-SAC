@@ -6,14 +6,15 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './hero-social.component.html',
-  styleUrl: './hero-social.component.scss'
+  styleUrls: ['./hero-social.component.scss']
 })
 export class HeroSocialComponent {
 
   constructor(private router: Router) {}
 
   navegar(rota: string) {
-    this.router.navigate([`${rota}`])
-
+    this.router.navigate([rota]).then(() => {
+      window.scrollTo(0, 0);  // Força a rolagem para o topo após a navegação
+    });
   }
 }
