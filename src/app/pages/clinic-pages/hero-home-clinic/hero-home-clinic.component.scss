@@ -17,7 +17,7 @@
     z-index: 10;
     position: relative;
     height: 100%; 
-    min-height: 40rem; 
+    min-height: 100vh; //Isso aqui corrigiu o erro de uma linha cinza aparecendo debaixo do site
     background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     align-items: center;
