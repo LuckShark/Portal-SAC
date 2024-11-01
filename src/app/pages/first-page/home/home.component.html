@@ -17,7 +17,7 @@
             Confira nossos serviços de saúde associados à Clínica e ao Hospital
           </p>
           <button class="flex mx-auto text-white bg-green-500 border-0 py-2 px-5 focus:outline-none hover:bg-green-600 rounded"
-          [routerLink]="['/clinica']"
+          (click)="navegar('clinica')"
           >Área da Saúde</button>
         </div>
         <div class="sm:w-1/2 mb-10 px-4">
@@ -29,7 +29,7 @@
             Confira nossos trabalhos sociais, projetos, escola e muito mais
           </p>
           <button class="flex mx-auto text-white bg-green-500 border-0 py-2 px-5 focus:outline-none hover:bg-green-600 rounded"
-          [routerLink]="['/social']"
+          (click)="navegar('social')"
           >Área Social</button>
         </div>
       </div>
