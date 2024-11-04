@@ -1,3 +1,74 @@
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-12 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+        Nossos Convênios
+      </h1>
+      <p class="leading-relaxed text-base">
+        É muito importante observar que cada tipo de convênio possui regras específicas de
+        utilização, portanto, entre em contato com a nossa equipe de atendimento antes de
+        agendar sua consulta para que a documentação necessária seja providenciada corretamente.
+      </p>
+    </div>
+
+    <!-- Flex container for cards -->
+    <div class="flex flex-wrap -m-4">
+      <!-- Exibe apenas os três primeiros convênios por padrão -->
+      <div
+        class="p-4 w-full sm:w-1/2 lg:w-1/3"
+        *ngFor="let convenio of convenios.slice(0, mostrarMais ? convenios.length : 3)"
+      >
+        <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
+          <div class="p-6 flex flex-col justify-center items-center">
+            <img
+              alt="{{ convenio.nome }}"
+              class="w-full max-h-32 object-contain object-center bg-gray-100 p-4 mb-4"
+              [src]="convenio.logo"
+            />
+            <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
+              {{ convenio.nome }}
+            </h2>
+            <p class="text-sm text-gray-500 text-center">
+              <!-- Verificação se o convênio é "Popular" -->
+              <ng-container *ngIf="convenio.nome === 'Popular'; else externalLink">
+                <button
+                  (click)="openDialog()"
+                  class="hover:text-secondary-400 text-primary-500"
+                >
+                  Mais informações
+                </button>
+              </ng-container>
+              <ng-template #externalLink>
+                <a
+                  [href]="convenio.link"
+                  target="_blank"
+                  class="hover:text-secondary-400"
+                >
+                  Mais informações
+                </a>
+              </ng-template>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão para carregar todos os convênios -->
+    <div class="flex justify-center mt-6">
+      <button
+        (click)="toggleMostrarMais()"
+        class="bg-primary-500 text-white py-2 px-6 rounded focus:outline-none hover:bg-primary-700 transition-all duration-300"
+      >
+        {{ mostrarMais ? 'Ver menos' : 'Carregar todos' }}
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 <!-- <section class="text-gray-600 body-font">
     <div class="container px-5 py-12 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
@@ -244,439 +315,3 @@
 
 
 
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-12 mx-auto">
-      <div class="flex flex-col text-center w-full mb-12">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-          Nossos Convênios
-        </h1>
-        <p class="leading-relaxed text-base">
-          É muito importante observar que cada tipo de convênio possui regras específicas de
-          utilização, portanto, entre em contato com a nossa equipe de atendimento antes de
-          agendar sua consulta para que a documentação necessária seja providenciada corretamente.
-        </p>
-      </div>
-  
-      <!-- Flex container for cards -->
-      <div class="flex flex-wrap -m-4">
-        <!-- Card 1 -->
-        <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-          <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-            <div class="p-6 flex flex-col justify-center items-center">
-              <img
-                alt="Unimed"
-                class="w-full max-h-32 object-contain object-center bg-gray-100 p-4 mb-4"
-                src="assets/logos/logo-unimed.jpg"
-              />
-              <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                Unimed
-              </h2>
-              <p class="text-sm text-gray-500 text-center">
-                <a href="https://www.unimed.coop.br/site/fale-com-a-unimed" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-              </p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 2 -->
-        <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-          <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-            <div class="p-6 flex flex-col justify-center items-center">
-              <img
-                alt="Hapvida"
-                class="w-full max-h-32 object-contain object-center bg-gray-100 p-4 mb-4"
-                src="assets/logos/logo-hapvida.jpg"
-              />
-              <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                Hapvida
-              </h2>
-              <p class="text-sm text-gray-500 text-center">
-                <a href="https://www.hapvida.com.br/site/central_de_ajuda" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-              </p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 3 CAMED -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Camed"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/logo-camed.jpg"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Camed
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.camed.com.br/fale-conosco" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 4 Ambep -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Ambep"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/ambep.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Ambep
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://ambep.com.br/plano-de-saude-ambep.php"  target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 5 BRADESCO -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Camed"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/logo-bradesco.jpg"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Bradesco
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.bradescoseguros.com.br/clientes/produtos/plano-saude/telefones-bradesco-saude" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 6 AMIL -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Amil"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/amil.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Amil
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.amil.com.br/institucional/#/market/planos" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 7 Blue -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Blue"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/blue.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Blue
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://saudeblue.com/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 8 Cafaz -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Cafaz"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/cafaz.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Cafaz
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.cafaz.org.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 9 Caixa -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Caixa"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/caixa.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Caixa
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://centralsaudecaixa.com.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 10 Cassi -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Cassi"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/cassi.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Cassi
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.cassi.com.br/nossos-planos/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 11 Fachesf -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Fachesf"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/fachesf.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Fachesf
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.fachesfsaude.com.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 12 Assefaz -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Assefaz"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/fund-assefaz.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Assefaz
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.assefaz.org.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 13 Fusex -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Fusex"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/fusex.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Fusex
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.fusex.com.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 15 Golden Cross -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Golden Cross"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/golden-cross.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Golden Cross
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.goldencross.com.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 16 I P M -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="IPM"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/ipm.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  IPM
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.ipm.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 17 ISSEC -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Issec"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/issec.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Issec
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.issec.ce.gov.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 18 PETROBRAS -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Petrobras"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/petrobras.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Petrobras
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.petrobras.com.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 19 POSTAL SAUDE -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Postal Saude"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/Postal-saude.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Postal Saúde
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.postalsaude.com.br/" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 20 SUS -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="SUS"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/sus.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  SUS
-                </h2>
-                <p class="text-sm text-gray-500 text-center">
-                  <a href="https://www.gov.br/saude/pt-br" target="_blank" class="hover:text-secondary-400">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-
-          <!-- Card 21 Particular -->
-          <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
-            <div class="h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-              <div class="p-6 flex flex-col justify-center items-center">
-                <img
-                  alt="Particular"
-                  class="w-full max-h-32 object-contain object-center bg-green-100 p-4 mb-4"
-                  src="assets/logos/particular.png"
-                />
-                <h2 class="text-lg font-medium text-gray-900 title-font mb-2 text-center">
-                  Popular
-                </h2>
-                <p class="text-sm text-gray-500 text-center hover:text-secondary-400 hover:cursor-pointer">
-                  <a (click)="openDialog()">Mais informações</a>
-                </p>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Repetir esse padrão para outros convênios -->
-      </div>
-    </div>
-  </section>
-  
