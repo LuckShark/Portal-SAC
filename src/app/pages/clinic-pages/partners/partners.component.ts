@@ -15,6 +15,8 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class PartnersComponent {
 
+  //DIALOG para quando clicar em "POPULAR"
+
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
