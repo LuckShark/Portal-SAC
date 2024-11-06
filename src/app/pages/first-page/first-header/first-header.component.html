@@ -1,0 +1,74 @@
+<nav class="relative flex items-center justify-between sm:h-10 md:justify-center py-6 px-4 mt-2 m-2">
+    <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+        <div class="flex items-center justify-between w-full md:w-auto">
+            <a href="" aria-label="Home">
+                <img src="assets/logos/sac-logo.png" height="40" width="40" />
+            </a>
+            <div class="-mr-2 flex items-center md:hidden">
+
+                <!-- Texto "Instituto de Cegos" que aparece no modo responsivo -->
+                <span class="ml-4 text-lg font-bold text-gray-700 block md:hidden text-center mr-8">
+                    Instituto de Cegos
+                </span>
+
+                <!-- Botão de Hambúrguer Animado -->
+                <button
+                    type="button"
+                    (click)="isMenuOpen = !isMenuOpen"
+                    aria-label="Main menu"
+                    aria-haspopup="true"
+                    class="relative w-14 h-14 focus:outline-none rounded bg-teal-600"
+                >
+                    <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <!-- Linha superior -->
+                        <span
+                            class="block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out"
+                            [ngClass]="{'rotate-45': isMenuOpen, '-translate-y-1.5': !isMenuOpen}"
+                        ></span>
+                        <!-- Linha do meio -->
+                        <span
+                            class="block absolute h-0.5 w-5 bg-white transform transition duration-500 ease-in-out"
+                            [ngClass]="{'opacity-0': isMenuOpen}"
+                        ></span>
+                        <!-- Linha inferior -->
+                        <span
+                            class="block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out"
+                            [ngClass]="{'-rotate-45': isMenuOpen, 'translate-y-1.5': !isMenuOpen}"
+                        ></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Menu principal em telas maiores -->
+    <div class="hidden md:flex md:space-x-10">
+        <a href="#features" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Institucional</a>
+        <a href="#pricing" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Saúde</a>
+        <a href="/blog" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Educação</a>
+        <a href="https://docs.pingping.io" target="_blank" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Documentação</a>
+    </div>
+    <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+        <span class="inline-flex">
+            <a href="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-blue-600 hover:text-green-500 focus:outline-none transition duration-150 ease-in-out">
+                Fale conosco
+            </a>
+        </span>
+        <span class="inline-flex rounded-md shadow ml-2">
+            <a href="/signup" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 transition duration-150 ease-in-out">
+                Marque uma consulta
+            </a>
+        </span>
+    </div>
+</nav>
+
+<!-- Menu dropdown para dispositivos móveis -->
+<div *ngIf="isMenuOpen" class="md:hidden bg-white shadow-lg rounded-lg mt-2 px-4 py-6 space-y-4">
+    <a href="#features" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Institucional</a>
+    <a href="#pricing" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Saúde</a>
+    <a href="/blog" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Educação</a>
+    <a href="https://docs.pingping.io" target="_blank" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Documentação</a>
+    <a href="/login" class="block font-medium text-blue-600 hover:text-blue-500 transition duration-150 ease-in-out">Fale conosco</a>
+    <a href="/signup" class="block font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-md px-4 py-2 transition duration-150 ease-in-out">
+        Marque uma consulta
+    </a>
+</div>
