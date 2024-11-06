@@ -1,0 +1,30 @@
+:host {
+  position: relative;
+}
+
+app-carrossel {
+  z-index: 0;
+  height: 40rem; 
+  position: absolute; /* NÃO TIRE */
+  /*NÃO MEXA NÃO CONSEGUI DEIXAR DE OUTRO MODO*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section {
+  z-index: 10;
+  position: relative;
+  height: 100%; 
+  min-height: 100vh; //Isso aqui corrigiu o erro de uma linha cinza aparecendo debaixo do site
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+h1, p, button {
+  z-index: 20; 
+}
+

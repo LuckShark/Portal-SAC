@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 import { FirstHeaderComponent } from "../first-header/first-header.component";
+import { FirstCardsComponent } from "../first-cards/first-cards.component";
+import { FirstSliderComponent } from "../first-slider/first-slider.component";
 
 
 @Component({
@@ -9,7 +11,9 @@ import { FirstHeaderComponent } from "../first-header/first-header.component";
   standalone: true,
   imports: [
     RouterModule,
-    FirstHeaderComponent
+    FirstHeaderComponent,
+    FirstCardsComponent,
+    FirstSliderComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
