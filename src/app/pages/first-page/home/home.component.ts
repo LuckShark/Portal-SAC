@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { FirstHeaderComponent } from "../first-header/first-header.component";
 import { FirstCardsComponent } from "../first-cards/first-cards.component";
 import { FirstSliderComponent } from "../first-slider/first-slider.component";
+import { FirstFooterComponent } from "../first-footer/first-footer.component";
 
 
 @Component({
@@ -13,7 +14,8 @@ import { FirstSliderComponent } from "../first-slider/first-slider.component";
     RouterModule,
     FirstHeaderComponent,
     FirstCardsComponent,
-    FirstSliderComponent
+    FirstSliderComponent,
+    FirstFooterComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
