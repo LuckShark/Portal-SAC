@@ -1,63 +1,260 @@
-<section class="text-accent-50 bg-primary-300 body-font">
+<section class="text-accent-50 bg-primary-50 body-font">
     <div class="container px-5 py-12 mx-auto">
       <div class="flex flex-col text-center w-full mb-10">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Exames precisos para um diagnóstico certeiro</h1>
-        <p class="leading-relaxed text-base text-white">
-          A prevenção é o melhor remédio! Realize exames oftalmológicos regulares para detectar qualquer alteração na sua visão. Confira na lista nossos exames disponíveis:
-        </p>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-500">Todos os Exames</h1>
+        <!-- <p class="leading-relaxed text-base text-gray-600">
+          A prevenção é o melhor remédio! Realize exames oftalmológicos regulares para detectar qualquer alteração na sua visão. <br/> 
+          Confira na lista nossos exames disponíveis:
+        </p> -->
       </div>
   
-      <!-- Use grid layout para alinhar os cards de forma consistente -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1 -->
         <div class="relative cursor-pointer h-full" (click)="navegar('acuidade-visual')">
           <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery2.jpg">
-          <div class="relative z-10 p-8 border-4 border-gray-800 bg-gray-900 opacity-80 hover:opacity-90 hover:bg-primary-900 flex flex-col justify-between min-h-[220px]">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
             <div>
-              <h2 class="tracking-widest text-xs title-font font-medium text-indigo-400 mb-1">Exame</h2>
-              <h1 class="title-font text-base font-medium text-white mb-3">Acuidade Visual (PAM)</h1>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Acuidade Visual (PAM)</h1>
             </div>
           </div>
         </div>
-  
-        <div class="relative cursor-pointer h-full" (click)="navegar('/')">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery2.jpg">
-          <div class="relative z-10 p-8 border-4 border-gray-800 bg-gray-900 opacity-80 hover:opacity-90 hover:bg-primary-900 flex flex-col justify-between min-h-[220px]">
+
+        <!-- Card 2-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('angiografia')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery1.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
             <div>
-              <h2 class="tracking-widest text-xs title-font font-medium text-indigo-400 mb-1">Exame</h2>
-              <h1 class="title-font text-base font-medium text-white mb-3">Angiografia com Fluorescência</h1>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Angiografia</h1>
             </div>
           </div>
         </div>
-  
-        <div class="relative cursor-pointer h-full" (click)="navegar('/')">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery2.jpg">
-          <div class="relative z-10 p-8 border-4 border-gray-800 bg-gray-900 opacity-80 hover:opacity-90 hover:bg-primary-900 flex flex-col justify-between min-h-[220px]">
+
+        <!-- Card 3-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('biometria')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery3.png">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
             <div>
-              <h2 class="tracking-widest text-xs title-font font-medium text-indigo-400 mb-1">Exame</h2>
-              <h1 class="title-font text-base font-medium text-white mb-3">Biometria IOL Master</h1>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Biometria</h1>
             </div>
           </div>
         </div>
-  
-        <div class="relative cursor-pointer h-full" (click)="navegar('/')">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery2.jpg">
-          <div class="relative z-10 p-8 border-4 border-gray-800 bg-gray-900 opacity-80 hover:opacity-90 hover:bg-primary-900 flex flex-col justify-between min-h-[220px]">
+        
+        <!-- Card 4-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('biomicroscopia')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery4.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
             <div>
-              <h2 class="tracking-widest text-xs title-font font-medium text-indigo-400 mb-1">Exame</h2>
-              <h1 class="title-font text-base font-medium text-white mb-3">Biomicroscopia de Fundo</h1>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Biomicroscopia</h1>
             </div>
           </div>
         </div>
-  
-        <div class="relative cursor-pointer h-full" (click)="navegar('/')">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery2.jpg">
-          <div class="relative z-10 p-8 border-4 border-gray-800 bg-gray-900 opacity-80 hover:opacity-90 hover:bg-primary-900 flex flex-col justify-between min-h-[220px]">
+
+        <!-- Card 5-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('campimetria')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery7.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
             <div>
-              <h2 class="tracking-widest text-xs title-font font-medium text-indigo-400 mb-1">Exame</h2>
-              <h1 class="title-font text-base font-medium text-white mb-3">Campimetria Computadorizada</h1>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Campimetria</h1>
             </div>
           </div>
         </div>
+
+        <!-- Card 6-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('yaglaser')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-yag.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Capsulectomia (YAG)</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('ceratoscopia')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery8.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Ceratoscopia</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('curva-tensional')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery9.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Curva Tensional</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('ecografia')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery10.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Ecografia</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 10-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('fotocoagulacao')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-fotocoag.png">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Fotocoagulação Laser</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('gonioscopia')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery11.jpeg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Gonioscopia</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('iridectomia')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery12.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Iridectomia</h1>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 13-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('mapeamento-de-retina')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery13.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Mapeamento de Retina</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 14-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('microscopia-especular')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery1.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Microscopia Especular</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 15-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('motilidade-ocular')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery3.png">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Motilidade Ocular
+              </h1>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 16-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('OCT')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-oct.png">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3"> Tomografia Ocular De Coerência (OCT)
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 17-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('paquimetria')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-paq.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3"> 
+                Paquimetria
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 18-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('retinografia')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-ret.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3"> 
+                Retinografia
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 19-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('sondagem')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-sond.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3"> 
+                Sondagem Vias Lacrimais
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 20-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('tonometria')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-tono.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3"> 
+                Tonometria Computadorizada
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 21-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('teste-olhinho')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-baby.jpg">
+          <div class="relative z-10 p-8 border-4 border-secondary-700 bg-secondary-600 opacity-90 hover:opacity-80 hover:bg-secondary-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Exame</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3"> 
+                Teste do Olhinho
+              </h1>
+            </div>
+          </div>
+        </div>
+
+
+
       </div>
     </div>
   </section>
