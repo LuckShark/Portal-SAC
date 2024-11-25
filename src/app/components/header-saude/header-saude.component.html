@@ -45,13 +45,13 @@
       <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out cursor-pointer" (click)="navegar('consultas')">
         Consultas
       </a>
-      <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out cursor-pointer" (click)="navegar('clinica')">
+      <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out cursor-pointer" (click)="navegar('exames')">
         Exames
       </a>
-      <a href="/blog" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+      <a (click)="navegar('cirurgias')" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out cursor-pointer ">
         Cirurgias
       </a>
-      <a href="https://docs.pingping.io" target="_blank" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+      <a (click)="navegar('faq')" target="_blank" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out cursor-pointer ">
         Dúvidas
       </a>
   </div>
@@ -71,10 +71,10 @@
 
 <!-- Menu dropdown para dispositivos móveis -->
 <div *ngIf="isMenuOpen" class="md:hidden bg-white shadow-lg rounded-lg mt-2 px-4 py-6 space-y-4 text-center">
-  <a href="#features" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Consultas</a>
-  <a href="#pricing" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Exames</a>
-  <a href="/blog" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Cirurgias</a>
-  <a href="https://docs.pingping.io" target="_blank" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Dúvidas</a>
+  <a (click)="navegar('consultas')" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Consultas</a>
+  <a (click)="navegar('exames')" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Exames</a>
+  <a (click)="navegar('cirurgias')" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Cirurgias</a>
+  <a (click)="navegar('faq')" target="_blank" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Dúvidas</a>
   <a href="/login" class="block font-medium text-blue-600 hover:text-blue-500 transition duration-150 ease-in-out">Trabalho Social</a>
   <a href="/signup" class="block font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-md px-4 py-2 transition duration-150 ease-in-out">
       Marque uma consulta

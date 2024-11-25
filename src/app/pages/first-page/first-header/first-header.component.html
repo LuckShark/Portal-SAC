@@ -42,9 +42,11 @@
     </div>
     <!-- Menu principal em telas maiores -->
     <div class="hidden md:flex md:space-x-10">
-        <a href="#features" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Institucional</a>
+        <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Institucional</a>
         <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out cursor-pointer" (click)="navegar('clinica')">Saúde</a>
-        <a href="/blog" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Educação</a>
+        <a class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out" (click)="navegar('social')">
+            Educação
+        </a>
         <a href="https://docs.pingping.io" target="_blank" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Documentação</a>
     </div>
     <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
@@ -63,12 +65,12 @@
 
 <!-- Menu dropdown para dispositivos móveis -->
 <div *ngIf="isMenuOpen" class="md:hidden bg-white shadow-lg rounded-lg mt-2 px-4 py-6 space-y-4">
-    <a href="#features" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Institucional</a>
-    <a href="#pricing" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Saúde</a>
-    <a href="/blog" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Educação</a>
+    <a class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Institucional</a>
+    <a class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out" (click)="navegar('clinica')">Saúde</a>
+    <a class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out" (click)="navegar('social')">Educação</a>
     <a href="https://docs.pingping.io" target="_blank" class="block font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out">Documentação</a>
-    <a href="/login" class="block font-medium text-blue-600 hover:text-blue-500 transition duration-150 ease-in-out">Fale conosco</a>
-    <a href="/signup" class="block font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-md px-4 py-2 transition duration-150 ease-in-out">
+    <a class="block font-medium text-blue-600 hover:text-blue-500 transition duration-150 ease-in-out">Fale conosco</a>
+    <a class="block font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-md px-4 py-2 transition duration-150 ease-in-out">
         Marque uma consulta
     </a>
 </div>
