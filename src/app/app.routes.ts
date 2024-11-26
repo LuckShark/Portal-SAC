@@ -16,10 +16,12 @@ export const routes: Routes = [
     {
         path: 'home',
         component: HomeComponent,
+        data: { animation: 'HomePage' }
     },
     {
         path: 'clinica',
         component: HomeClinicComponent,
+        data: { animation: 'ClinicPage' }
     },
     {
         path: 'faq',

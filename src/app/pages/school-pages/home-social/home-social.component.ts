@@ -3,11 +3,12 @@ import { HeaderSocialComponent } from "../../../components/header-social/header-
 import { HeroSocialComponent } from "../hero-social/hero-social.component";
 import { FooterSocialComponent } from "../../../components/footer-social/footer-social.component";
 import { HeroVideoComponent } from "../hero-video/hero-video.component";
+import { TestHeaderComponent } from "../../../components/test-header/test-header.component";
 
 @Component({
   selector: 'app-home-social',
   standalone: true,
-  imports: [HeaderSocialComponent, HeroSocialComponent, FooterSocialComponent, HeroVideoComponent],
+  imports: [HeaderSocialComponent, HeroSocialComponent, FooterSocialComponent, HeroVideoComponent, TestHeaderComponent],
   templateUrl: './home-social.component.html',
   styleUrl: './home-social.component.scss'
 })
