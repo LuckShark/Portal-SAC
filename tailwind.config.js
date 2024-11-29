@@ -13,6 +13,10 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'], // Fonte global padrão
+        serif: ['Merriweather', 'serif'], // Outra fonte opcional
+      },
       colors: {
         primaryColor: '#00B8FF',
         secondaryColor: '#001F2B',
@@ -69,5 +73,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
