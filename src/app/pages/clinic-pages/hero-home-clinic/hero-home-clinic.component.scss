@@ -27,5 +27,31 @@
   h1, p, button {
     z-index: 20; 
   }
+
+  h1{
+    font-family: 'Poppins';
+  }
   
+  p {
+    font-size: 24px;
+    font-family: 'Poppins';
+  }
+
+  //MUDANÇAS POR CAUSA DO LOGO
+
+  .logo-container {
+    img {
+      position: relative;
+      top: -30%; //
+    }
+  }
+  
+  .text-logo-section {
+    display: flex;
+    justify-content: center; // Centraliza todo o componente horizontalmente
+    align-items: center; // Garante alinhamento vertical correto
+    @media (min-width: 1024px) {
+      justify-content: center; // Centraliza em telas grandes
+    }
+  }
   

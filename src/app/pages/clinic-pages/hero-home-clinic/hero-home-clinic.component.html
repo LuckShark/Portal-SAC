@@ -9,30 +9,42 @@
     ]"
   ></app-carrossel>
 
-  <!-- Seção com o conteúdo sobreposto -->
+  <!-- Seção com o conteúdo sobreposto + logo -->
   <section class="relative text-gray-400 bg-primary-200 bg-opacity-75 body-font z-10">
-    <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
-      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-        <h1 class="title-font text-5xl sm:text-6xl lg:text-7xl mb-4 font-bold text-white z-20">
-          <!-- Prevenção e Saúde ocular
-          <br class="hidden lg:inline-block" /> -->
-          <span class="text-3xl sm:text-4xl lg:text-5xl font-medium">Sociedade de Assistência aos Cegos</span>
-        </h1>
-        <p class="mb-8 leading-relaxed text-accent-50 z-20 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
-          Localizada em uma região privilegiada e de fácil acesso, a Sociedade de Assistência aos Cegos (SAC) dispõe de um hospital moderno e uma clínica aconchegante, que tem como objetivo oferecer aos seus pacientes um atendimento humanizado, exclusivo e personalizado, aliado aos mais modernos conhecimentos e técnicas em Oftalmologia.
-        </p>        
-        <div class="flex flex-col sm:flex-row justify-center gap-4 z-20">
-          <button class="text-white bg-indigo-500 py-2 px-4 sm:px-6 focus:outline-none hover:scale-105 hover:bg-purple-600 duration-300 rounded text-sm sm:text-lg whitespace-nowrap">
-            Agende uma consulta
-          </button>
-          <button class="text-accent-50 bg-primary-300 py-2 px-4 sm:px-6 focus:outline-none hover:scale-105 hover:bg-indigo-800 duration-300 hover:text-white rounded text-sm sm:text-lg whitespace-nowrap">
-            Saiba mais
-          </button>
+    <div class="container mx-auto flex px-5 py-12 text-logo-section">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <!-- Logo -->
+        <div class="logo-container flex-shrink-0">
+          <img 
+            src="assets/logos/sac-logo.png" 
+            alt="Logo do Instituto de Cegos do Ceará" 
+            class="w-24 h-24 sm:w-32 sm:h-32 object-contain relative"
+            style="top: -40px;"
+          />
         </div>
-        
-      </div>      
+  
+        <!-- Texto -->
+        <div class="lg:flex-grow flex flex-col text-center md:text-left">
+          <h1 class="title-font text-5xl sm:text-6xl lg:text-7xl mb-4 font-bold text-white z-20">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-medium">Instituto de Cegos do Ceará</span>
+          </h1>
+          <p class="mb-8 leading-relaxed text-accent-50 z-20 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
+            Há 82 anos cuidando da sua visão
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4 z-20">
+            <button class="text-black bg-white py-2 px-4 sm:px-6 focus:outline-none hover:scale-105 hover:bg-green-600 duration-300 rounded text-sm sm:text-lg whitespace-nowrap">
+              Fale conosco
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+  
+  
+
+  <!-- FIM DA Seção com o conteúdo sobreposto + logo -->
+
 </div>
 
 
