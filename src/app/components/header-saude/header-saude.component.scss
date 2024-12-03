@@ -1,2 +1,10 @@
+// OBSERVAÇÃO 03/12
+//Para ajustar o overflow do Portal inteiro, o header da saude (e somente ele) ficou quebrando - aparecia uma barra de rolagem vertical do lado do botão "Marque uma consulta"
+//Foi necessário corrigir com SCSS
 
-  
+
+nav {
+    //NÃO TIREI AS MARGENS NEM O PADDING, SE NÃO FICARIA COLADO
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo de tamanho */
+    overflow: hidden; /* Evita qualquer overflow vertical */
+  }

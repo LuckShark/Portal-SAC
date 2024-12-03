@@ -1,16 +1,58 @@
-/*Imports do tailwind*/
+/* Imports do Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*Imports dos arquivos de theme*/
+/* Imports dos arquivos de tema */
 @import 'palette.scss';
 @import 'theming.scss';
 
+/* Estilos gerais */
+html, body { 
+  height: 100%; 
+}
 
+body {
+  margin: 0;
+  font-family: inherit; // Herda as configurações do Tailwind para fonte
+  overflow-x: hidden; // Evita overflow horizontal globalmente
+}
 
-html, body { height: 100%; }
-body { 
-    margin: 0; 
-    font-family: inherit; //Herda as configurações do tailwind para fonte
+* {
+  box-sizing: border-box; // Garante que padding e bordas sejam considerados no tamanho total
+}
+
+img {
+  max-width: 100%; // Evita imagens maiores que o container
+  height: auto;    // Mantém a proporção
+}
+
+.container, nav, header, footer {
+  max-width: 100vw; // Garante que os containers não ultrapassem a largura da viewport
+  overflow-x: hidden; // Previne possíveis scrolls horizontais
+}
+
+.navbar, .header, .footer {
+  display: flex;
+  flex-wrap: wrap; // Força elementos a se alinharem em novas linhas caso fiquem grandes
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+  body {
+    padding: 0; // Remove padding em telas menores, se existir
+  }
+
+  nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hamburger-menu {
+    margin-right: auto; // Garante que o botão não cause overflow
+  }
+
+  .dropdown {
+    width: calc(100vw - 2rem); // Limita menus dropdown para caberem na tela com margem
+  }
 }
