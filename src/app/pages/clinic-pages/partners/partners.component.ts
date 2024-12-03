@@ -1,8 +1,10 @@
 import { DialogExampleComponent } from './../dialog-example/dialog-example.component'; // Correta importação
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-partners',
@@ -10,12 +12,16 @@ import { CommonModule } from '@angular/common';
   imports: [
     MatButtonModule, 
     MatDialogModule,
-    CommonModule
+    CommonModule,
+    MatTooltipModule
   ],
   templateUrl: './partners.component.html',
   styleUrls: ['./partners.component.scss']
 })
 export class PartnersComponent {
+
+  //Erro de acessar o objeto window diretamente pra acessar o tamanho da tela ( isso não está disponível por causa do SSR)
+  isMobile: boolean = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
 
   //DIALOG para quando clicar em "POPULAR"
 
@@ -132,10 +138,14 @@ export class PartnersComponent {
       logo: 'assets/logos/particular.png',
       link: ''
     },
-    // Adicione mais ...
   ];
 
   toggleMostrarMais() {
     this.mostrarMais = !this.mostrarMais;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobile = event.target.innerWidth < 768;
   }
 }
