@@ -28,7 +28,7 @@
               <ng-container *ngIf="convenio.nome === 'Popular'; else externalLink">
                 <button
                   (click)="openDialog()"
-                  class="hover:text-secondary-400 text-primary-500"
+                  class="hover:text-secondary-400 text-primary-500 transition-all duration-300 transform hover:scale-105"
                 >
                   Mais informações
                 </button>
@@ -37,7 +37,7 @@
                 <a
                   [href]="convenio.link"
                   target="_blank"
-                  class="hover:text-secondary-400"
+                  class="hover:text-green-600 "
                 >
                   Mais informações
                 </a>
