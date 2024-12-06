@@ -1,181 +1,156 @@
-<!-- source: https://github.com/mfg888/Responsive-Tailwind-CSS-Grid/blob/main/index.html -->
+<section class="text-accent-50 bg-green-50 body-font">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-col text-center w-full mb-10">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-500">Todos os Cirurgias</h1>
+      </div>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-<div class="text-center p-10">
-    <h1 class="font-bold text-4xl mb-4">Nossas Cirurgias</h1>
-    <h1 class="text-3xl">Todos os procedimentos</h1>
-</div>
-
-<!-- ✅ Grid Section - Starts Here 👇 -->
-<section id="Projects"
-    class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
-
-    <!--   ✅ Product card 1 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl cursor-pointer " (click)="navegar('consultas')">
-        <a>
-            <img src="assets/img/clinic/cirurgias/cirurgia-estrabismo.png"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Correção</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Estrabismo</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">Mais informações</p>
-                    <!-- <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">Informação riscada</p>
-                    </del> -->
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
+        <!-- Card 1 -->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia1-implante-anel')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery2.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3"> Implante de Anel Intraestromal</h1>
             </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 1 - Ends Here  -->
+          </div>
+        </div>
 
-    <!--   ✅ Product card 2 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl cursor-pointer " (click)="navegar('catarata')">
-        <a>
-            <img src="assets/img/clinic/cirurgias/cirurgia-catarata.jpg"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Cirurgia</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Catarata</p>
-                <div class="flex items-center justify-center">
-                    <button class="bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-2 px-4 rounded">
-                        Saiba mais
-                    </button>
-                    <!-- <p class="text-lg font-semibold text-black cursor-auto my-3">Anestesia Local</p> -->
-                    <!-- <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">Sem anestesia</p>
-                    </del> -->
-                    <!-- <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div> -->
-                </div>
+        <!-- Card 2-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia2-refrativa')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery1.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Refrativa</h1>
             </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 2- Ends Here  -->
+          </div>
+        </div>
 
-    <!--   ✅ Product card 3 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl cursor-pointer" (click)="navegar('cirurgia1-implante-anel')">
-        <a >
-            <img src="assets/img/clinic/cirurgias/cirurgia-anel.png"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Implante</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">
-                    Anel Intraestromal
-                </p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">Anestesia Local</p>
-                    <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">
-                            <!-- AQUI FICA RISCADO -->
-                        </p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
+        <!-- Card 3-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia3-plastica-ocular')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery3.png">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Plástica Ocular</h1>
             </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 3 - Ends Here  -->
-
-    <!--   ✅ Product card 4 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="assets/img/clinic/cirurgias/cirurgia-plastica.jpg"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Cirurgia</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Plástica Ocular</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">R$1,490.00 </p>
-                    <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2 pl-2">R$1,990.00</p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
+          </div>
+        </div>
+        
+        <!-- Card 4-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia4-catarata')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery4.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Catarata</h1>
             </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 4 - Ends Here  -->
+          </div>
+        </div>
 
-    <!--   ✅ Product card 5 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl cursor-pointer" (click)="navegar('cirurgia2-refrativa')" >
-        <a>
-            <img src="assets/img/clinic/cirurgias/cirurgia-refrativa.jpg"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">CORREÇÃO</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Cirurgia Refrativa</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">Ver detalhes</p>
-                    <!-- <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del> -->
-                    <!-- <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div> -->
-                </div>
+        <!-- Card 5-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia5-estrabismo')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery7.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Estrabismo</h1>
             </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 5 - Ends Here  -->
+          </div>
+        </div>
 
-    <!--   ✅ Product card 6 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="assets/img/clinic/cirurgias/cirurgia-cornea.jpg"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Transplante</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Transplante de Córnea</p>
-                <div class="flex items-center">
-                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                        Saiba mais
-                    </button>
-                    <!-- <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p> -->
-                    <!-- <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div> -->
-                </div>
+        <!-- Card 6-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia6-glaucoma')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-yag.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Glaucoma</h1>
             </div>
-        </a>
+          </div>
+        </div>
+
+        <!-- Card 7-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia7-retina')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery8.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Retina e Vítreo</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia8-transplante-cornea')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery9.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Transplante de Córnea
+            </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia9-injecao')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery10.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Injeção Antiangiogênica</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 10-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia10-blefaroplastia')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery-fotocoag.png">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Blefaroplastia</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia11-pterigio')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery11.jpeg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Pterígio</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia12-calazio')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery12.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Calázio</h1>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 13-->
+        <div class="relative cursor-pointer h-full" (click)="navegar('cirurgia13-tumor')">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/img/clinic/card-gallery13.jpg">
+          <div class="relative z-10 p-8 border-4 border-primary-700 bg-green-600 opacity-90 hover:opacity-80 hover:bg-green-500 flex flex-col justify-end min-h-[220px] transition-all duration-300 delay-100">
+            <div>
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-300 mb-1">Cirurgia</h2>
+              <h1 class="title-font text-base font-medium text-white-800 mb-3">Tumor Conjuntival</h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <!--   🛑 Product card 6 - Ends Here  -->
-
-</section>
-
-<!-- 🛑 Grid Section - Ends Here -->
-
+  </section>
+  
