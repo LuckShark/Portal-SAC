@@ -140,7 +140,7 @@ export const routes: Routes = [
         component: Exame15MotilidadeComponent
     },
     {
-        path: 'oct',
+        path: 'OCT',
         component: Exame16OctComponent
     },
     {
