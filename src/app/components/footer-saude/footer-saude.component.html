@@ -53,7 +53,7 @@
             </li>
             
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">Convênios</a>
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer" (click)="navegar('consultas')">Convênios</a>
             </li>
             <li>
               <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
@@ -72,32 +72,38 @@
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Exames</h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('OCT')">
                 OCT
               </a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('campimetria')">
                 Campo Visual
               </a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('mapeamento-retina')">
                 Mapeamento de Retina
               </a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('retinografia-colorida')">
                 Retinografia
               </a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('microscopia-especular')">
                 Microscopia
               </a>
             </li>
             <li>
-              <a class="relative text-gray-800 hover:text-green-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-600 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-green-600 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+              <a class="relative text-gray-800 hover:text-green-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-600 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-green-600 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
+              (click)="navegar('exames')">
                 Todos os Exames
               </a>
             </li>
@@ -107,32 +113,38 @@
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Cirurgias</h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('cirurgia4-catarata')">
                 Catarata
               </a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('cirurgia5-estrabismo')">
                 Estrabismo
               </a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('cirurgia6-glaucoma')">
                 Glaucoma
               </a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('cirurgia3-plastica-ocular')">
                 Plástica Ocular
               </a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+              (click)="navegar('cirurgia8-transplante-cornea')">
                 Transplante de Córnea
               </a>
             </li>
             <li>
-              <a class="relative text-gray-800 hover:text-green-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-600 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-green-600 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+              <a class="relative text-gray-800 hover:text-green-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-600 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-green-600 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
+              (click)="navegar('cirurgias')">
                 Todos as Cirurgias
               </a>
             </li>
