@@ -4,11 +4,12 @@ import { HeadingCirurgiasComponent } from "./heading-cirurgias/heading-cirurgias
 import { ConteudoCirurgiasComponent } from "./conteudo-cirurgias/conteudo-cirurgias.component";
 import { GaleriaCirurgiasComponent } from "./galeria-cirurgias/galeria-cirurgias.component";
 import { FooterSaudeComponent } from "../../../components/footer-saude/footer-saude.component";
+import { WhatsappClinicComponent } from "../../../components/whatsapp-clinic/whatsapp-clinic.component";
 
 @Component({
   selector: 'app-home-cirurgias',
   standalone: true,
-  imports: [HeaderSaudeComponent, HeadingCirurgiasComponent, ConteudoCirurgiasComponent, GaleriaCirurgiasComponent, FooterSaudeComponent],
+  imports: [HeaderSaudeComponent, HeadingCirurgiasComponent, ConteudoCirurgiasComponent, GaleriaCirurgiasComponent, FooterSaudeComponent, WhatsappClinicComponent],
   templateUrl: './home-cirurgias.component.html',
   styleUrl: './home-cirurgias.component.scss'
 })

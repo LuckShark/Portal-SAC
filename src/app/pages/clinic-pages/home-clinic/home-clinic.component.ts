@@ -9,11 +9,12 @@ import { ContactClinicComponent } from "../contact-clinic/contact-clinic.compone
 import { GalleryClinicComponent } from "../gallery-clinic/gallery-clinic.component";
 import { InstagramClinicComponent } from '../instagram-clinic/instagram-clinic.component';
 import { NovaGaleriaComponent } from "../nova-galeria/nova-galeria.component";
+import { WhatsappClinicComponent } from "../../../components/whatsapp-clinic/whatsapp-clinic.component";
 
 @Component({
   selector: 'app-home-clinic',
   standalone: true,
-  imports: [HeaderSaudeComponent, HeroHomeClinicComponent, FooterSaudeComponent, GalleryServicesClinicComponent, PartnersComponent, BlogClinicComponent, ContactClinicComponent, GalleryClinicComponent, InstagramClinicComponent, NovaGaleriaComponent],
+  imports: [HeaderSaudeComponent, HeroHomeClinicComponent, FooterSaudeComponent, GalleryServicesClinicComponent, PartnersComponent, BlogClinicComponent, ContactClinicComponent, GalleryClinicComponent, InstagramClinicComponent, NovaGaleriaComponent, WhatsappClinicComponent],
   templateUrl: './home-clinic.component.html',
   styleUrl: './home-clinic.component.scss'
 })
