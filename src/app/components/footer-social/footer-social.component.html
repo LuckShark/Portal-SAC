@@ -1,130 +1,236 @@
 <footer class="text-gray-600 body-font bg-primary-100">
-    <!--Qualquer coisa mexer no PADDING depe-->
-    <div class="container px-5 py-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <img src="assets/logos/sac-logo.png" alt="SAC Logo" class="w-12 h-12 p-0 rounded-full" />
-          <span class="ml-3 text-xl">SAC Social</span>
+  <div class="container px-5 py-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <img src="assets/logos/sac-logo.png" alt="SAC Logo" class="w-12 h-12 p-0 rounded-full" />
+        <span class="ml-3 text-xl">SAC Social</span>
+      </a>
+      
+      <!-- CONTATO CARDS -->
+      <section class="contact-section">
+        <figure>
+            <img src="assets/icons/whatsapp.svg" 
+            alt="Ícone para contato do whatsapp"
+            width="22px"
+            height="24px"
+            class="contact-img"
+            />
+            <figcaption>
+                <a href="https://wa.me/5585997397501"
+                target="_blank">
+                    <strong>Envie uma mensagem para:</strong>
+                    <p>Whatsapp: (55) 85 3206.6800</p>
+                </a>
+            </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/icons/mail.svg" 
+          alt="Ícone para contato do whatsapp"
+          width="22px"
+          height="24px"
+          class="contact-img"
+          />
+            <figcaption>
+                <a href="mailto:herpetolucas@gmail.com"
+                target="_blank">
+                    <strong>Nos contacte com e-mail em:</strong>
+                    <p>nossoemail&#64;gmail.com</p>
+                </a>
+            </figcaption>
+        </figure>
+    </section>
+
+
+    </div>
+    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Escola</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('consultas')">Imprensa</a>
+          </li>
+          
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer" (click)="navegar('consultas')">Livro Falado</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('consultas')">Biblioteca</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('consultas')">Doação</a>
+          </li>
+          <!-- <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">Fourth Link</a>
+          </li> -->
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+          Projetos
+        </h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('OCT')">
+              Trilhando o futuro
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('campimetria')">
+              Caminhos da Cidadania
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('mapeamento-retina')">
+              Mais um projeto
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('retinografia-colorida')">
+              Outro projeto legal
+            </a>
+          </li>
+          <!-- <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('microscopia-especular')">
+              Microscopia
+            </a>
+          </li> -->
+          <li>
+            <a class="relative text-gray-800 hover:text-green-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-600 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-green-600 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
+            (click)="navegar('exames')">
+              Todos os Projetos
+            </a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+          Assistência Social
+        </h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('cirurgia4-catarata')">
+              Cursos
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('cirurgia5-estrabismo')">
+              Reabilitação
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('cirurgia6-glaucoma')">
+              Projetos com família
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('cirurgia3-plastica-ocular')">
+              Projetos Culturais
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('cirurgia8-transplante-cornea')">
+              Doação
+            </a>
+          </li>
+          <!-- <li>
+            <a class="relative text-gray-800 hover:text-green-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-600 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-green-600 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
+            (click)="navegar('cirurgias')">
+              Todos as Cirurgias
+            </a>
+          </li> -->
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Institucional</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              Quem Somos
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              Documentos
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              Clínica
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              Hospital
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+              Links Úteis
+            </a>
+          </li>
+          
+        </nav>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+  <!-- SEGUNDO FOOTER -->
+
+  <div class="bg-gray-100">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2024 Sociedade de Assistência aos Cegos — Made by
+        <a href="https://portfolio-angular-gray-chi.vercel.app/" rel="noopener noreferrer" class="text-gray-600 ml-1 hover:text-primary-200" target="_blank">
+          Luckshark
         </a>
-        <p class="mt-2 text-sm text-gray-500">Sociedade de Assistência aos Cegos <br> Desde 1942 ensinando a ver o mundo</p>
-      </div>
-      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Escola</h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Ensino</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Sala Maker</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Biblioteca</a>
-            </li>
-            <li>
-                <a class="text-gray-600 hover:text-gray-800">Livro Falado</a>
-            </li>
-            <li>
-                <a class="text-gray-600 hover:text-gray-800">Laboratório de Informática</a>
-            </li>
-            <!-- <li>
-              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-            </li> -->
-          </nav>
-        </div>
-        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Assistência Social</h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Serviço Social</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Terapia Ocupacional</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Psicologia</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Fonoaudiologia</a>
-            </li>
-            <li>
-                <a class="text-gray-600 hover:text-gray-800">Reabilitação</a>
-            </li>
-            <li>
-                <a class="text-gray-600 hover:text-gray-800">Estimulação Visual</a>
-            </li>
-            <li>
-                <a class="text-gray-600 hover:text-gray-800">Cursos</a>
-            </li>
-            <li>
-                <a class="text-gray-600 hover:text-gray-800">Atividades Culturais</a>
-            </li>
-          </nav>
-        </div>
-        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Setor de Projetos</h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800"> Projeto Título Simples </a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800"> Projeto 2 Título Simples </a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Projeto 3 Título Simples </a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Projeto 4 Título Simples</a>
-            </li>
-          </nav>
-        </div>
-        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Saúde</h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Consultas</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Exames </a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Cirurgia</a>
-            </li>
-          </nav>
-        </div>
-      </div>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <!-- FACEBOOK-->
+        <a href="https://www.facebook.com/InstitutodeCegosdoCeara/?locale=pt_BR" target="_blank" class="text-gray-500 hover:text-blue-600 transform hover:scale-110 transition duration-200">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <!--INSTAGRAM-->
+        <a href="https://www.instagram.com/institutodecegos_ceara/?hl=en" target="_blank" class="ml-3 text-gray-500 hover:text-pink-500 transform hover:scale-110 transition duration-200">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <!--LINKEDIN-->
+        <a href="https://www.linkedin.com/" target="_blank" class="ml-3 text-gray-500 hover:text-blue-500 transform hover:scale-110 transition duration-200">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+
+        <!-- YOUTUBE -->
+        <a href="https://www.youtube.com/channel/UCtUfwXx8rC2rHNpRNl2_FgQ" target="_blank" class="ml-3 text-gray-500 hover:text-red-600 transform hover:scale-110 transition duration-200">
+          <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+            <path d="M19.6 3.2H4.4C3 3.2 2 4.3 2 5.7v12.6c0 1.4 1 2.5 2.4 2.5h15.2c1.4 0 2.4-1.1 2.4-2.5V5.7c0-1.4-1-2.5-2.4-2.5zm-8.6 12V8.8l5.6 3.2-5.6 3.2z"></path>
+          </svg>
+        </a>
+
+      </span>
     </div>
-    <div class="bg-gray-100">
-      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-        <p class="text-gray-500 text-sm text-center sm:text-left">© 2024 Sociedade de Assistência aos Cegos — Made by
-          <a href="https://portfolio-angular-gray-chi.vercel.app/" rel="noopener noreferrer" class="text-gray-600 ml-1 hover:text-primary-200" target="_blank">
-            Luckshark
-          </a>
-        </p>
-        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-          <a class="text-gray-500">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
-          </a>
-          <a class="ml-3 text-gray-500">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
-          </a>
-          <a class="ml-3 text-gray-500">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-            </svg>
-          </a>
-          <a class="ml-3 text-gray-500">
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-              <circle cx="4" cy="4" r="2" stroke="none"></circle>
-            </svg>
-          </a>
-        </span>
-      </div>
-    </div>
-  </footer>
+  </div>
+  
+</footer>
