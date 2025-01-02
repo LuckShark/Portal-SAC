@@ -1,0 +1,57 @@
+:host {
+    position: relative;
+  }
+  
+  section {
+    z-index: 10;
+    position: relative;
+    height: 100%; 
+    min-height: 100vh; //Isso aqui corrigiu o erro de uma linha cinza aparecendo debaixo do site
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  h1, p, button {
+    z-index: 20; 
+  }
+
+  h1{
+    font-family: 'Poppins';
+  }
+  
+  p {
+    font-size: 24px;
+    font-family: 'Poppins';
+  }
+
+  .p-numeros {
+    font-size: 16px;
+    font-family: 'Poppins';
+  }
+
+  .h-numeros {
+    font-size: 20px;
+    font-family: 'Poppins';
+  }
+
+  //MUDANÇAS POR CAUSA DO LOGO
+
+  .logo-container {
+    img {
+      position: relative;
+      top: -30%; 
+      z-index: 20; //Por alguma razão, a logo ficava junto com o vídeo nesse componente, tive que colocar ela para cima, então cuidado
+    }
+  }
+  
+  .text-logo-section {
+    display: flex;
+    justify-content: center; // Centraliza todo o componente horizontalmente
+    align-items: center; // Garante alinhamento vertical correto
+    @media (min-width: 1024px) {
+      justify-content: center; // Centraliza em telas grandes
+    }
+  }
+  
