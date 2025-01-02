@@ -42,6 +42,7 @@ import { Exame18RetinografiaComponent } from './pages/clinic-pages/home-exames/t
 import { Exame19SondagemComponent } from './pages/clinic-pages/home-exames/todosExames/exame19-sondagem/exame19-sondagem.component';
 import { Exame20TonometriaComponent } from './pages/clinic-pages/home-exames/todosExames/exame20-tonometria/exame20-tonometria.component';
 import { Exame21TesteOlhoComponent } from './pages/clinic-pages/home-exames/todosExames/exame21-teste-olho/exame21-teste-olho.component';
+import { LivroFaladoComponent } from './pages/school-pages/setores/livro-falado/livro-falado.component';
 
 export const routes: Routes = [
     {
@@ -222,5 +223,10 @@ export const routes: Routes = [
         component: Cirurgia13TumorComponent
     },
     //FIM CIRURGIAS
+    //SOCIAL 
+    {
+        path: 'livro-falado',
+        component: LivroFaladoComponent
+    },
     { path: '**', component: HomeComponent },
 ];
