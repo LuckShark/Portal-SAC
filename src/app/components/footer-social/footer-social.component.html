@@ -1,9 +1,11 @@
-<footer class="text-gray-600 body-font bg-primary-100">
+<!-- ESSE COMPONENTE É DA EDUCAÇÃO / ESCOLA E AFINS -->
+
+<footer class="text-gray-300 body-font bg-green-600">
   <div class="container px-5 py-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-200">
           <img src="assets/logos/sac-logo.png" alt="SAC Logo" class="w-12 h-12 p-0 rounded-full" />
-        <span class="ml-3 text-xl">SAC Social</span>
+        <span class="ml-3 text-xl text-gray-200">Instituto Hélio Góes</span>
       </a>
       
       <!-- CONTATO CARDS -->
@@ -16,10 +18,10 @@
             class="contact-img"
             />
             <figcaption>
-                <a href="https://wa.me/5585997397501"
+                <a href="https://wa.me/5585986852089"
                 target="_blank">
                     <strong>Envie uma mensagem para:</strong>
-                    <p>Whatsapp: (55) 85 3206.6800</p>
+                    <p>Whatsapp: (85) 986852089</p>
                 </a>
             </figcaption>
         </figure>
@@ -45,143 +47,137 @@
     </div>
     <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Escola</h2>
+        <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">Escola</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('consultas')">Imprensa</a>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('escola')">Infantil</a>
           </li>
           
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer" (click)="navegar('consultas')">Livro Falado</a>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer" (click)="navegar('escola')">Fundamental I</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('consultas')">Biblioteca</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('consultas')">Doação</a>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('escola')">Fundamental II</a>
           </li>
           <!-- <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">Fourth Link</a>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('consultas')">Gratuidade</a>
+          </li> -->
+          <!-- <li>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer">Fourth Link</a>
           </li> -->
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-          Projetos
-        </h2>
+        <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">Setores</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('OCT')">
-              Trilhando o futuro
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('biblioteca')">
+              Biblioteca
             </a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('campimetria')">
-              Caminhos da Cidadania
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('livro-falado')">
+              Livro Falado
             </a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('mapeamento-retina')">
-              Mais um projeto
-            </a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('retinografia-colorida')">
-              Outro projeto legal
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('sala-maker')">
+              Sala Maker
             </a>
           </li>
           <!-- <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('retinografia-colorida')">
+              Retinografia
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
             (click)="navegar('microscopia-especular')">
               Microscopia
             </a>
           </li> -->
           <li>
-            <a class="relative text-gray-800 hover:text-green-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-600 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-green-600 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
-            (click)="navegar('exames')">
-              Todos os Projetos
+            <a class="relative text-gray-300 hover:text-blue-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-blue-800 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-blue-800 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
+            (click)="navegar('social')">
+              Todos setores
             </a>
           </li>
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-          Assistência Social
-        </h2>
+        <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">Outros</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('cirurgia4-catarata')">
-              Cursos
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('informatica')">
+              Informática
             </a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
             (click)="navegar('cirurgia5-estrabismo')">
-              Reabilitação
+              Projetos
             </a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
             (click)="navegar('cirurgia6-glaucoma')">
-              Projetos com família
-            </a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('cirurgia3-plastica-ocular')">
-              Projetos Culturais
-            </a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer"
-            (click)="navegar('cirurgia8-transplante-cornea')">
-              Doação
+              Imprensa Braille
             </a>
           </li>
           <!-- <li>
-            <a class="relative text-gray-800 hover:text-green-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-600 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-green-600 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
-            (click)="navegar('cirurgias')">
-              Todos as Cirurgias
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('cirurgia3-plastica-ocular')">
+              Plástica Ocular
             </a>
           </li> -->
+          <!-- <li>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer"
+            (click)="navegar('cirurgia8-transplante-cornea')">
+              Transplante de Córnea
+            </a>
+          </li> -->
+          <li>
+            <a class="relative text-gray-300 hover:text-blue-800 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-blue-800 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-blue-800 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
+            (click)="navegar('social')">
+              Outros setores
+            </a>
+          </li>
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Institucional</h2>
+        <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">Institucional</h2>
         <nav class="list-none mb-10">
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer">
               Quem Somos
             </a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer">
               Documentos
             </a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
-              Clínica
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer">
+              Reabilitação
             </a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
-              Hospital
-            </a>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer">Assistência</a>
           </li>
-          <li>
-            <a class="text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out cursor-pointer">
-              Links Úteis
+          <!-- <li>
+            <a class="text-gray-300 hover:text-blue-800 transition duration-150 ease-in-out cursor-pointer">
+              Projetos
             </a>
-          </li>
+          </li> -->
           
         </nav>
       </div>
@@ -195,14 +191,14 @@
 
   <div class="bg-gray-100">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2024 Sociedade de Assistência aos Cegos — Made by
-        <a href="https://portfolio-angular-gray-chi.vercel.app/" rel="noopener noreferrer" class="text-gray-600 ml-1 hover:text-primary-200" target="_blank">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2025 Sociedade de Assistência aos Cegos — Made by
+        <a href="https://portfolio-angular-gray-chi.vercel.app/" rel="noopener noreferrer" class="text-green-600 ml-1 hover:text-blue-800" target="_blank">
           Luckshark
         </a>
       </p>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
         <!-- FACEBOOK-->
-        <a href="https://www.facebook.com/InstitutodeCegosdoCeara/?locale=pt_BR" target="_blank" class="text-gray-500 hover:text-blue-600 transform hover:scale-110 transition duration-200">
+        <a href="https://www.facebook.com/InstitutodeCegosdoCeara/?locale=pt_BR" target="_blank" class="text-gray-500 hover:text-blue-800 transform hover:scale-110 transition duration-200">
           <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
           </svg>
