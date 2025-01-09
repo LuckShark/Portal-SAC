@@ -7,4 +7,10 @@ nav {
     //NÃO TIREI AS MARGENS NEM O PADDING, SE NÃO FICARIA COLADO
     box-sizing: border-box; /* Inclui bordas e padding no cálculo de tamanho */
     overflow: hidden; /* Evita qualquer overflow vertical */
+    background-color: #ffffff; /* Define uma cor de fundo para evitar sobreposição com o conteúdo abaixo */
+    
+  }
+
+  a {
+    font-size: 16px;
   }
