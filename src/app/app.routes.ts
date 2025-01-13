@@ -44,6 +44,9 @@ import { Exame20TonometriaComponent } from './pages/clinic-pages/home-exames/tod
 import { Exame21TesteOlhoComponent } from './pages/clinic-pages/home-exames/todosExames/exame21-teste-olho/exame21-teste-olho.component';
 import { LivroFaladoComponent } from './pages/school-pages/setores/livro-falado/livro-falado.component';
 import { AssistPagesComponent } from './pages/assist-pages/assist-pages.component';
+import { ReabilitacaoComponent } from './pages/assist-pages/TODOS-assist/reabilitacao/reabilitacao.component';
+import { FortalecendoComponent } from './pages/assist-pages/TODOS-assist/fortalecendo/fortalecendo.component';
+import { ProjetosECursosComponent } from './pages/assist-pages/TODOS-assist/projetos-e-cursos/projetos-e-cursos.component';
 
 export const routes: Routes = [
     {
@@ -234,6 +237,18 @@ export const routes: Routes = [
     {
         path: 'assistencia',
         component: AssistPagesComponent
+    },
+    {
+        path: 'reabilitacao',
+        component: ReabilitacaoComponent
+    },
+    {
+        path: 'fortalecendo',
+        component: FortalecendoComponent
+    },
+    {
+        path: 'projetos-e-cursos',
+        component: ProjetosECursosComponent
     },
     { path: '**', component: HomeComponent },
 ];
