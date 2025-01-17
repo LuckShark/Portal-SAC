@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import * as AOS from 'aos';
 
 
@@ -10,10 +11,14 @@ import * as AOS from 'aos';
   styleUrl: './intro-reabilitacao.component.scss'
 })
 export class IntroReabilitacaoComponent implements OnInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
-    AOS.init({
-      duration: 1000, // Duração da animação em milissegundos
-      once: true,     // Executa a animação apenas uma vez
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 800, // Duração da animação em milissegundos
+        once: true,    // A animação será executada apenas uma vez
+      });
+    }
   }
 }
