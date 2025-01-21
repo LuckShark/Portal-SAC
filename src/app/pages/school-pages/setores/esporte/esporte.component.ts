@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { HeadingEsporteComponent } from "./heading-esporte/heading-esporte.component";
+import { HeaderSocialComponent } from "../../../../components/header-social/header-social.component";
 
 @Component({
   selector: 'app-esporte',
   standalone: true,
-  imports: [],
+  imports: [HeadingEsporteComponent, HeaderSocialComponent],
   templateUrl: './esporte.component.html',
   styleUrl: './esporte.component.scss'
 })

@@ -1,47 +1,9 @@
-
-.contact-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-direction: column;
-    padding-top: 16px;
-
-    figure {
-        width: 265px;
-        height: 47px;
-
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-        border: 1px solid green;
-        border-radius: 7px;
-
-        figcaption {
-            a {
-                display: flex;
-                align-items: flex-start;
-                justify-content: center;
-                flex-direction: column;
-
-                p {
-                    margin: 3px 0;
-                }
-
-                strong {
-                    color: rgb(103, 255, 103);
-                }
-            }
-        }
-    }
+h2, a{
+    font-family: 'Poppins';
 }
 
-.contact-img {
-    color: white; /* Define o SVG como branco */
-  }
-  
+.minitext{
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavegacaoService } from '../../../../../services/navegacao.service';
 
 @Component({
   selector: 'app-heading-esporte',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './heading-esporte.component.scss'
 })
 export class HeadingEsporteComponent {
+
+  constructor(private navegacaoService: NavegacaoService) {}
+      
+        navegar(rota: string) {
+          this.navegacaoService.navegarParaRota(rota);
+        }
 
 }
