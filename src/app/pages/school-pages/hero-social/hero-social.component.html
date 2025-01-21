@@ -16,7 +16,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('consultas')">
+              <a class="cursor-pointer" (click)="navegar('imprensa')">
                   <img class="w-full h-60 object-cover" src="assets/img/school/braile.png" alt="Atendimento">
                   <div
                       class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
@@ -26,13 +26,13 @@
                           Imprensa Braille
                       </h3>
                       <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                          Conheça o serviço
+                          Conheça o setor
                       </span>
                   </div>
               </a>
           </div>
           <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('exames')">
+              <a class="cursor-pointer" (click)="navegar('institucional')">
                   <img class="w-full h-60 object-cover" src="assets/img/school/casa-rosa.png" alt="Casarão">
                   <div
                       class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
@@ -46,7 +46,7 @@
               </a>
           </div>
           <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('cirurgias')">
+              <a class="cursor-pointer" (click)="navegar('biblioteca')">
                   <img class="w-full h-60 object-cover" src="assets/img/school/biblioteca.png" alt="Project 1">
                   <div
                       class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
@@ -65,45 +65,45 @@
               <a class="cursor-pointer" (click)="navegar('escola')">
                   <img class="w-full h-60 object-cover" src="assets/img/school/profa-aluno.jpg" alt="Escola com aluno">
                   <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-indigo-500 to-pink-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
+                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
                   </div>
                   <div class="p-4 flex flex-col items-center justify-between relative z-10">
                       <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                          Serviços Escolares
+                          Educação
                       </h3>
-                      <span class="text-sm font-bold text-pink-500 group-hover:text-indigo-500">
+                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
                           Conheça a escola
                       </span>
                   </div>
               </a>
           </div> 
           <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a href="/project-5">
+              <a class="cursor-pointer" (click)="navegar('assistencia')">
                   <img class="w-full h-60 object-cover" src="assets/img/school/assistSocial.jpg" alt="Serviços sociais da instituição">
                   <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-indigo-500 to-pink-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
+                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
                   </div>
                   <div class="p-4 flex flex-col items-center justify-between relative z-10">
                       <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
                           Assistência Social
                       </h3>
-                      <span class="text-sm font-bold text-pink-500 group-hover:text-indigo-500">
-                          Conheça nossos serviços sociais
+                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
+                          Reabilitação e outros serviços
                       </span>
                   </div>
               </a>
           </div> 
            <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a href="/project-6">
+              <a class="cursor-pointer" (click)="navegar('atendimento')">
                   <img class="w-full h-60 object-cover" src="assets/img/school/salamaker.jpg" alt="Project 1">
                   <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-indigo-500 to-pink-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
+                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
                   </div>
                   <div class="p-4 flex flex-col items-center justify-between relative z-10">
                       <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                          Projetos e Parcerias
+                          Atendimentos Complementares
                       </h3>
-                      <span class="text-sm font-bold text-pink-500 group-hover:text-indigo-500">
+                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
                           Conheça nossos Projetos
                       </span>
                   </div>
@@ -114,14 +114,48 @@
             <a class="cursor-pointer" (click)="navegar('livro-falado')">
                 <img class="w-full h-60 object-cover" src="assets/img/school/livro-falado.png" alt="Gravação">
                 <div
-                    class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-indigo-500 to-pink-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
+                    class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
                 </div>
                 <div class="p-4 flex flex-col items-center justify-between relative z-10">
                     <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
                         Livro falado
                     </h3>
-                    <span class="text-sm font-bold text-pink-500 group-hover:text-indigo-500">
+                    <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
                         Conheça o projeto, seja voluntário
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
+            <a class="cursor-pointer" (click)="navegar('musica')">
+                <img class="w-full h-60 object-cover" src="assets/img/school/livro-falado.png" alt="Gravação">
+                <div
+                    class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
+                </div>
+                <div class="p-4 flex flex-col items-center justify-between relative z-10">
+                    <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
+                        Música
+                    </h3>
+                    <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
+                        Conheça as atividades
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
+            <a class="cursor-pointer" (click)="navegar('esporte')">
+                <img class="w-full h-60 object-cover" src="assets/img/school/esporte1.jpg" alt="Alunos praticando esporte">
+                <div
+                    class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
+                </div>
+                <div class="p-4 flex flex-col items-center justify-between relative z-10">
+                    <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
+                        Esporte
+                    </h3>
+                    <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
+                        Conheça os projetos
                     </span>
                 </div>
             </a>

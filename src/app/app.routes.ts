@@ -47,6 +47,13 @@ import { AssistPagesComponent } from './pages/assist-pages/assist-pages.componen
 import { ReabilitacaoComponent } from './pages/assist-pages/TODOS-assist/reabilitacao/reabilitacao.component';
 import { FortalecendoComponent } from './pages/assist-pages/TODOS-assist/fortalecendo/fortalecendo.component';
 import { ProjetosECursosComponent } from './pages/assist-pages/TODOS-assist/projetos-e-cursos/projetos-e-cursos.component';
+import { AtendimentoComponent } from './pages/school-pages/setores/atendimento/atendimento.component';
+import { MusicaComponent } from './pages/school-pages/setores/musica/musica.component';
+import { EsporteComponent } from './pages/school-pages/setores/esporte/esporte.component';
+import { SalaMakerComponent } from './pages/school-pages/setores/sala-maker/sala-maker.component';
+import { ImprensaComponent } from './pages/school-pages/setores/imprensa/imprensa.component';
+import { InstitucionalComponent } from './pages/school-pages/setores/institucional/institucional.component';
+import { BibliotecaComponent } from './pages/school-pages/setores/biblioteca/biblioteca.component';
 
 export const routes: Routes = [
     {
@@ -62,14 +69,6 @@ export const routes: Routes = [
     {
         path: 'faq',
         component: HomeFaqComponent
-    },
-    {
-        path: 'social',
-        component: HomeSocialComponent
-    },
-    {
-        path: 'escola',
-        component: SchoolComponent
     },
     {
         path: 'projetos',
@@ -227,13 +226,50 @@ export const routes: Routes = [
         component: Cirurgia13TumorComponent
     },
     //FIM CIRURGIAS
+    //Setor Escola e demais abaixo <--------------------------------------------
     //SOCIAL (ESCOLA / EDUCAÇÃO)
+    {
+        path: 'social',
+        component: HomeSocialComponent
+    },
+    {
+        path: 'escola',
+        component: SchoolComponent
+    },
     {
         path: 'livro-falado',
         component: LivroFaladoComponent
     },
+    {
+        path: 'atendimento',
+        component: AtendimentoComponent
+    },
+    {
+        path: 'musica',
+        component: MusicaComponent
+    },
+    {
+        path: 'esporte',
+        component: EsporteComponent
+    },
+    {
+        path: 'sala-maker',
+        component: SalaMakerComponent
+    },
+    {
+        path: 'imprensa',
+        component: ImprensaComponent
+    },
+    {
+        path: 'institucional',
+        component: InstitucionalComponent
+    },
+    {
+        path: 'biblioteca',
+        component: BibliotecaComponent
+    },
     //fim social (escola)
-    //ASSISTENCIA (SERVICO SOCIAL)
+    //ASSISTENCIA (SERVICO SOCIAL) <------------------------------
     {
         path: 'assistencia',
         component: AssistPagesComponent
