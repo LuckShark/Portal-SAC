@@ -43,31 +43,31 @@
   <div class="hidden md:flex md:space-x-20">
     <a
       class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer"
-      (click)="navegar('consultas')"
+      (click)="navegar('escola')"
     >
       Educação
     </a>
     <a
       class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer"
-      (click)="navegar('exames')"
+      (click)="navegar('imprensa')"
     >
       Imprensa Braille
     </a>
     <a
-      (click)="navegar('cirurgias')"
+      (click)="navegar('biblioteca')"
       class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer "
     >
       Biblioteca
     </a>
     <a
-      (click)="navegar('faq')"
+      (click)="navegar('livro-falado')"
       target="_blank"
       class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer "
     >
       Livro Falado
     </a>
     <a
-      (click)="navegar('faq')"
+      (click)="navegar('institucional')"
       target="_blank"
       class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer "
     >
@@ -92,29 +92,35 @@
   class="fixed top-16 left-0 w-full bg-white shadow-lg rounded-lg px-4 py-6 space-y-4 text-center z-40 md:hidden"
 >
   <a
-    (click)="navegar('consultas')"
+    (click)="navegar('escola')"
     class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
   >
-    Consultas
+    -
   </a>
   <a
-    (click)="navegar('exames')"
+    (click)="navegar('escola')"
     class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
   >
-    Exames
+    Educação
   </a>
   <a
-    (click)="navegar('cirurgias')"
+    (click)="navegar('biblioteca')"
     class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
   >
-    Cirurgias
+    Biblioteca
   </a>
   <a
-    (click)="navegar('faq')"
+    (click)="navegar('livro-falado')"
+    class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+  >
+    Livro Falado
+  </a>
+  <a
+    (click)="navegar('institucional')"
     target="_blank"
     class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
   >
-    Dúvidas
+    Institucional
   </a>
   <a
   (click)="openDoacaoModal()"
@@ -122,10 +128,10 @@
   >
     Faça uma doação
   </a>
-  <a
+  <!-- <a
     href="/signup"
     class="block font-medium text-white bg-green-600 hover:bg-blue-500 rounded-md px-4 py-2 transition duration-150 ease-in-out"
   >
     Marque uma consulta
-  </a>
+  </a> -->
 </div>

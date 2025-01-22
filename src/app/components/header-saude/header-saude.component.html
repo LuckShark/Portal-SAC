@@ -84,6 +84,13 @@
   *ngIf="isMenuOpen"
   class="fixed top-16 left-0 w-full bg-white shadow-lg rounded-lg px-4 py-6 space-y-4 text-center z-40 md:hidden"
 >
+<!-- !Esse "a" extra é para empurrar os demais para baixo, no mobile - o primeiro está sendo comido pelo header-->
+  <a
+    (click)="navegar('consultas')"
+    class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+  >
+    -
+  </a>
   <a
     (click)="navegar('consultas')"
     class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"

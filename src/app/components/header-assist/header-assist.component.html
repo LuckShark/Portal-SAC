@@ -1,130 +1,137 @@
-<nav class="relative flex items-center justify-between sm:h-10 md:justify-center py-6 px-4 mt-2 m-2 font-sans">
-    <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-      <div class="flex items-center justify-between w-full md:w-auto">
-        <a href="" aria-label="Home">
-          <!-- Logo com tamanho maior -->
-          <img src="assets/logos/sac-logo.png" class="w-12 h-12 object-contain" alt="Logo" />
-        </a>
-        <div class="-mr-2 flex items-center md:hidden">
-          <!-- Texto "Instituto de Cegos" que aparece no modo responsivo -->
-          <span class="ml-4 text-lg font-bold text-gray-700 block md:hidden text-center mr-8">
-            Assistência Social
-          </span>
-          <!-- Botão de Hambúrguer Animado -->
-          <button
-            type="button"
-            (click)="isMenuOpen = !isMenuOpen"
-            aria-label="Main menu"
-            aria-haspopup="true"
-            class="relative w-14 h-14 focus:outline-none rounded bg-teal-600"
-          >
-            <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <!-- Linha superior -->
-              <span
-                class="block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out"
-                [ngClass]="{'rotate-45': isMenuOpen, '-translate-y-1.5': !isMenuOpen}"
-              ></span>
-              <!-- Linha do meio -->
-              <span
-                class="block absolute h-0.5 w-5 bg-white transform transition duration-500 ease-in-out"
-                [ngClass]="{'opacity-0': isMenuOpen}"
-              ></span>
-              <!-- Linha inferior -->
-              <span
-                class="block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out"
-                [ngClass]="{'-rotate-45': isMenuOpen, 'translate-y-1.5': !isMenuOpen}"
-              ></span>
-            </div>
-          </button>
-        </div>
+<nav class="sticky top-0 z-50 flex items-center justify-between bg-white sm:h-10 md:justify-center w-full py-8 px-8 font-sans shadow">
+  <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+    <div class="flex items-center justify-between w-full md:w-auto">
+      <a href="/" aria-label="Home">
+        <!-- Logo com tamanho maior -->
+        <img src="assets/logos/sac-logo.png" class="w-12 h-12 object-contain" alt="Logo" />
+      </a>
+      <div class="-mr-2 flex items-center md:hidden">
+        <!-- Texto "Instituto de Cegos" que aparece no modo responsivo -->
+        <span class="ml-4 text-lg font-bold text-gray-700 block md:hidden text-center mr-8">
+          Instituto Hélio Góes
+        </span>
+        <!-- Botão de Hambúrguer Animado -->
+        <button
+          type="button"
+          (click)="isMenuOpen = !isMenuOpen"
+          aria-label="Main menu"
+          aria-haspopup="true"
+          class="relative w-14 h-14 focus:outline-none rounded bg-teal-600"
+        >
+          <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <!-- Linha superior -->
+            <span
+              class="block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out"
+              [ngClass]="{'rotate-45': isMenuOpen, '-translate-y-1.5': !isMenuOpen}"
+            ></span>
+            <!-- Linha do meio -->
+            <span
+              class="block absolute h-0.5 w-5 bg-white transform transition duration-500 ease-in-out"
+              [ngClass]="{'opacity-0': isMenuOpen}"
+            ></span>
+            <!-- Linha inferior -->
+            <span
+              class="block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out"
+              [ngClass]="{'-rotate-45': isMenuOpen, 'translate-y-1.5': !isMenuOpen}"
+            ></span>
+          </div>
+        </button>
       </div>
     </div>
-    <!-- Menu principal em telas maiores -->
-    <div class="hidden md:flex md:space-x-20">
-      <a
-        class="font-medium text-gray-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer"
-        (click)="navegar('consultas')"
-      >
-        Serviços de Reabilitação
-      </a>
-      <a
-        class="font-medium text-gray-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer"
-        (click)="navegar('exames')"
-      >
-        Cursos
-      </a>
-      <a
-        (click)="navegar('cirurgias')"
-        class="font-medium text-gray-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer "
-      >
-        Fortalecimento de vínculos
-      </a>
-      <a
-        (click)="navegar('faq')"
-        target="_blank"
-        class="font-medium text-gray-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer "
-      >
-        Projetos culturais
-      </a>
-      <a
-          href="/login"
-          class="font-medium text-blue-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer"
-        >
-          Faça sua doação
-        </a>
-    </div>
-    <!--- ESSE BOTÃO FICA COMENTADO POR ENQUANTO, NÃO ACHEI NECESSÁRIO-->
-    <!-- <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-      
-      <span class="inline-flex rounded-md shadow ml-2">
-        <a
-          href="/signup"
-          class="inline-flex items-center px-4 py-2 border border-green-600 text-base leading-6 font-medium rounded-md text-green-600 bg-white hover:bg-green-600 hover:text-white focus:outline-none focus:border-blue-700 transition duration-150 ease-in-out"
-        >
-          Marque uma visita
-        </a>
-      </span>
-    </div> -->
-  </nav>
-  
-  <!-- Menu dropdown para dispositivos móveis -->
-  <div *ngIf="isMenuOpen" class="md:hidden bg-white shadow-lg rounded-lg mt-2 px-4 py-6 space-y-4 text-center">
+  </div>
+  <!-- Menu principal em telas maiores -->
+  <div class="hidden md:flex md:space-x-20">
     <a
-      (click)="navegar('consultas')"
-      class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+      class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer"
+      (click)="navegar('reabilitacao')"
     >
-      Consultas
+      Reabilitação
     </a>
     <a
-      (click)="navegar('exames')"
-      class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+      class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer"
+      (click)="navegar('fortalecendo')"
     >
-      Exames
+      Fortalecendo Vínculos
     </a>
     <a
-      (click)="navegar('cirurgias')"
-      class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+      (click)="navegar('projetos-e-cursos')"
+      class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer "
     >
-      Cirurgias
+      Projetos Culturais
     </a>
     <a
-      (click)="navegar('faq')"
+      (click)="navegar('projetos-e-cursos')"
       target="_blank"
-      class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+      class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer "
     >
-      Dúvidas
+      Cursos Disponíveis
     </a>
     <a
-      href="/login"
-      class="block font-medium text-blue-600 hover:text-blue-500 transition duration-150 ease-in-out"
+      (click)="navegar('institucional')"
+      target="_blank"
+      class="font-medium text-green-500 hover:text-green-600 transition duration-150 ease-in-out cursor-pointer "
     >
-      Faça uma doação
-    </a>
-    <a
-      href="/signup"
-      class="block font-medium text-white bg-green-600 hover:bg-blue-500 rounded-md px-4 py-2 transition duration-150 ease-in-out"
-    >
-      Marque uma consulta
+      Institucional
     </a>
   </div>
-  
+  <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+    <span class="inline-flex rounded-md shadow ml-2">
+      <a
+      (click)="openDoacaoModal()"
+        class="inline-flex items-center px-4 py-2 border border-green-600 text-base leading-6 font-medium rounded-md text-green-600 bg-white hover:bg-green-600 hover:text-white focus:outline-none focus:border-blue-700 transition duration-150 ease-in-out cursor-pointer"
+      >
+        Faça uma doação
+      </a>
+    </span>
+  </div>
+</nav>
+
+<!-- Menu dropdown para dispositivos móveis -->
+<div
+  *ngIf="isMenuOpen"
+  class="fixed top-16 left-0 w-full bg-white shadow-lg rounded-lg px-4 py-6 space-y-4 text-center z-40 md:hidden"
+>
+  <a
+    (click)="navegar('reabilitacao')"
+    class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+  >
+    -
+  </a>
+  <a
+    (click)="navegar('reabilitacao')"
+    class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+  >
+    Reabilitação
+  </a>
+  <a
+    (click)="navegar('projetos-e-cursos')"
+    class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+  >
+    Projetos
+  </a>
+  <a
+    (click)="navegar('projetos-e-cursos')"
+    class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+  >
+    Cursos
+  </a>
+  <a
+    (click)="navegar('fortalecendo')"
+    target="_blank"
+    class="block font-medium text-gray-700 hover:text-green-600 transition duration-150 ease-in-out"
+  >
+    Fortalecendo Vínculos
+  </a>
+  <a
+  (click)="openDoacaoModal()"
+    class="block font-medium text-blue-600 hover:text-blue-500 transition duration-150 ease-in-out"
+  >
+    Faça uma doação
+  </a>
+  <!-- <a
+    href="/signup"
+    class="block font-medium text-white bg-green-600 hover:bg-blue-500 rounded-md px-4 py-2 transition duration-150 ease-in-out"
+  >
+    Marque uma consulta
+  </a> -->
+</div>
