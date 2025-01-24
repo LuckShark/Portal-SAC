@@ -1,165 +1,367 @@
 <!-- source https://github.com/spacemadev/elevate-free-tailwind-business-template/ -->
-<section id="portfolio" class="portfolio-section py-16 px-4 bg-primary-50 font-sans">
+<section
+  id="portfolio"
+  class="portfolio-section py-16 px-4 bg-primary-50 font-sans"
+>
   <div class="container mx-auto">
-      <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4">Em que podemos ajudar?</h2>
-          <p class="text-lg text-indigo-500 font-semibold">
-              Conheça nossos serviços
-          </p>
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Em que podemos ajudar?</h2>
+      <p class="text-lg text-indigo-500 font-semibold">
+        Conheça nossos serviços
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Card 1: Imprensa Braille -->
+      <div
+        class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+      >
+        <a class="cursor-pointer" (click)="navegar('imprensa')">
+          <img
+            class="w-full h-60 object-cover"
+            src="assets/img/school/braile.png"
+            alt="Atendimento"
+          />
+          <!-- Background overlay -->
+          <div
+            class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+          ></div>
+          <!-- Centralized text on hover -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+          >
+            <p class="text-white text-center text-lg font-medium px-4">
+              Imprensa a serviço da escola da instituição, mais textos aqui,
+              blablaba
+            </p>
+          </div>
+          <!-- Default content -->
+          <div
+            class="p-4 flex flex-col items-center justify-between relative z-10"
+          >
+            <h3 class="text-lg font-medium text-txt group-hover:text-white">
+              Imprensa Braille
+            </h3>
+            <span
+              class="text-sm font-bold text-green-700 group-hover:text-white"
+            >
+              Conheça o setor
+            </span>
+          </div>
+        </a>
       </div>
-      <!-- <div class="flex flex-col md:flex-row items-center mb-8">
-          <button class="filter-button bg-indigo-500 hover:bg-pink-500 px-4 py-2 mr-2 mb-2 text-white rounded">All</button>
-          <button class="filter-button  bg-indigo-500 hover:bg-pink-500 px-4 py-2 mr-2 mb-2 text-white rounded">Web Design</button>
-          <button class="filter-button  bg-indigo-500 hover:bg-pink-500 px-4 py-2 mr-2 mb-2 text-white rounded">App Development</button>
-          <button class="filter-button  bg-indigo-500 hover:bg-pink-500 px-4 py-2 mr-2 mb-2 text-white rounded">Branding</button>
-      </div> -->
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('imprensa')">
-                  <img class="w-full h-60 object-cover" src="assets/img/school/braile.png" alt="Atendimento">
-                  <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                  </div>
-                  <div class="p-4 flex flex-col items-center justify-between relative z-10 ">
-                      <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                          Imprensa Braille
-                      </h3>
-                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                          Conheça o setor
-                      </span>
-                  </div>
-              </a>
+      <!-- INSTITUCIONAL -->
+      <div
+        class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+      >
+        <a class="cursor-pointer" (click)="navegar('institucional')">
+          <img
+            class="w-full h-60 object-cover"
+            src="assets/img/school/casa-rosa.png"
+            alt="Casarão"
+          />
+          <!-- Background overlay -->
+          <div
+            class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+          ></div>
+          <!-- Centralized text on hover -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+          >
+            <p class="text-white text-center text-lg font-medium px-4">
+              Quem somos <br/>
+              Equipe <br/>
+              Documentação <br/>
+            </p>
           </div>
-          <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('institucional')">
-                  <img class="w-full h-60 object-cover" src="assets/img/school/casa-rosa.png" alt="Casarão">
-                  <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                  </div>
-                  <div class="p-4 flex flex-col items-center justify-between relative z-10">
-                      <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                          Institucional
-                      </h3>
-                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">Conheça nossa história</span>
-                  </div>
-              </a>
+          <!-- Default content -->
+          <div
+            class="p-4 flex flex-col items-center justify-between relative z-10"
+          >
+            <h3 class="text-lg font-medium text-txt group-hover:text-white">
+              Institucional
+            </h3>
+            <span
+              class="text-sm font-bold text-green-700 group-hover:text-white"
+            >
+              Conheça nossa história
+            </span>
           </div>
-          <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('biblioteca')">
-                  <img class="w-full h-60 object-cover" src="assets/img/school/biblioteca.png" alt="Project 1">
-                  <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                  </div>
-                  <div class="p-4 flex flex-col items-center justify-between relative z-10">
-                      <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                          Biblioteca
-                      </h3>
-                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                          Veja nossos livros e projetos
-                      </span>
-                  </div>
-              </a>
-          </div>
-          <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('escola')">
-                  <img class="w-full h-60 object-cover" src="assets/img/school/profa-aluno.jpg" alt="Escola com aluno">
-                  <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                  </div>
-                  <div class="p-4 flex flex-col items-center justify-between relative z-10">
-                      <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                          Educação
-                      </h3>
-                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                          Conheça a escola
-                      </span>
-                  </div>
-              </a>
-          </div> 
-          <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('assistencia')">
-                  <img class="w-full h-60 object-cover" src="assets/img/school/assistSocial.jpg" alt="Serviços sociais da instituição">
-                  <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                  </div>
-                  <div class="p-4 flex flex-col items-center justify-between relative z-10">
-                      <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                          Assistência Social
-                      </h3>
-                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                          Reabilitação e outros serviços
-                      </span>
-                  </div>
-              </a>
-          </div> 
-           <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-              <a class="cursor-pointer" (click)="navegar('atendimento')">
-                  <img class="w-full h-60 object-cover" src="assets/img/school/salamaker.jpg" alt="Project 1">
-                  <div
-                      class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                  </div>
-                  <div class="p-4 flex flex-col items-center justify-between relative z-10">
-                      <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                          Atendimentos Complementares
-                      </h3>
-                      <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                          Conheça nossos Projetos
-                      </span>
-                  </div>
-              </a>
-          </div>
-
-          <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-            <a class="cursor-pointer" (click)="navegar('livro-falado')">
-                <img class="w-full h-60 object-cover" src="assets/img/school/livro-falado.png" alt="Gravação">
-                <div
-                    class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                </div>
-                <div class="p-4 flex flex-col items-center justify-between relative z-10">
-                    <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                        Livro falado
-                    </h3>
-                    <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                        Conheça o projeto, seja voluntário
-                    </span>
-                </div>
-            </a>
-        </div>
-
-        <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-            <a class="cursor-pointer" (click)="navegar('musica')">
-                <img class="w-full h-60 object-cover" src="assets/img/school/musica.png" alt="Menino tocando piano">
-                <div
-                    class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                </div>
-                <div class="p-4 flex flex-col items-center justify-between relative z-10">
-                    <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                        Música
-                    </h3>
-                    <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                        Conheça as atividades
-                    </span>
-                </div>
-            </a>
-        </div>
-
-        <div class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200">
-            <a class="cursor-pointer" (click)="navegar('esporte')">
-                <img class="w-full h-60 object-cover" src="assets/img/school/esporte1.jpg" alt="Alunos praticando esporte">
-                <div
-                    class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-green-400 to-blue-400 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70">
-                </div>
-                <div class="p-4 flex flex-col items-center justify-between relative z-10">
-                    <h3 class="text-lg font-medium text-txt group-hover:text-gray-dark">
-                        Esporte
-                    </h3>
-                    <span class="text-sm font-bold text-green-700 group-hover:text-secondary-600">
-                        Conheça os projetos
-                    </span>
-                </div>
-            </a>
-        </div>
+        </a>
       </div>
+
+      <!-- E S C O L A (Ensino) -->
+      <div
+        class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+      >
+        <a class="cursor-pointer" (click)="navegar('escola')">
+          <img
+            class="w-full h-60 object-cover"
+            src="assets/img/school/profa-aluno.jpg"
+            alt="Casarão"
+          />
+          <!-- Background overlay -->
+          <div
+            class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+          ></div>
+          <!-- Centralized text on hover -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+          >
+            <p class="text-white text-center text-lg font-medium px-4">
+              Ensino Infantil <br/>
+              Fundamental I <br/>
+              Fundamental II <br/>
+            </p>
+          </div>
+          <!-- Default content -->
+          <div
+            class="p-4 flex flex-col items-center justify-between relative z-10"
+          >
+            <h3 class="text-lg font-medium text-txt group-hover:text-white">
+              Escola
+            </h3>
+            <span
+              class="text-sm font-bold text-green-700 group-hover:text-white"
+            >
+              Conheça nossa escola
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- BIBLIOTECA -->
+      <div
+        class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+      >
+        <a class="cursor-pointer" (click)="navegar('biblioteca')">
+          <img
+            class="w-full h-60 object-cover"
+            src="assets/img/school/biblioteca.png"
+            alt="Casarão"
+          />
+          <!-- Background overlay -->
+          <div
+            class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+          ></div>
+          <!-- Centralized text on hover -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+          >
+            <p class="text-white text-center text-lg font-medium px-4">
+              Atividades de leitura e outros projetos
+            </p>
+          </div>
+          <!-- Default content -->
+          <div
+            class="p-4 flex flex-col items-center justify-between relative z-10"
+          >
+            <h3 class="text-lg font-medium text-txt group-hover:text-white">
+              Biblioteca
+            </h3>
+            <span
+              class="text-sm font-bold text-green-700 group-hover:text-white"
+            >
+              Conheça o setor
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- ASSISTENCIA SOCIAL -->
+      <div
+        class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+      >
+        <a class="cursor-pointer" (click)="navegar('assistencia')">
+          <img
+            class="w-full h-60 object-cover"
+            src="assets/img/assist/mobilidade.jpg"
+            alt="Casarão"
+          />
+          <!-- Background overlay -->
+          <div
+            class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+          ></div>
+          <!-- Centralized text on hover -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+          >
+            <p class="text-white text-center text-lg font-medium px-4">
+              Reabilitação, projetos e cursos para beneficiários
+            </p>
+          </div>
+          <!-- Default content -->
+          <div
+            class="p-4 flex flex-col items-center justify-between relative z-10"
+          >
+            <h3 class="text-lg font-medium text-txt group-hover:text-white">
+              Assistência Social
+            </h3>
+            <span
+              class="text-sm font-bold text-green-700 group-hover:text-white"
+            >
+              Conheça o setor
+            </span>
+          </div>
+        </a>
+      </div>
+
+       <!-- ATENDIMENTOS COMPLEMENTARES -->
+       <div
+       class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+     >
+       <a class="cursor-pointer" (click)="navegar('atendimento')">
+         <img
+           class="w-full h-60 object-cover"
+           src="assets/img/school/salamaker.jpg"
+           alt="Casarão"
+         />
+         <!-- Background overlay -->
+         <div
+           class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+         ></div>
+         <!-- Centralized text on hover -->
+         <div
+           class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+         >
+           <p class="text-white text-center text-lg font-medium px-4">
+             Recursos multifuncionais, Sala Maker, Informática e muito mais
+           </p>
+         </div>
+         <!-- Default content -->
+         <div
+           class="p-4 flex flex-col items-center justify-between relative z-10"
+         >
+           <h3 class="text-lg font-medium text-txt group-hover:text-white">
+             Atendimentos Complementares
+           </h3>
+           <span
+             class="text-sm font-bold text-green-700 group-hover:text-white"
+           >
+             Conheça as atividades
+           </span>
+         </div>
+       </a>
+     </div>
+
+     <!-- LIVRO FALADO -->
+     <div
+     class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+   >
+     <a class="cursor-pointer" (click)="navegar('livro-falado')">
+       <img
+         class="w-full h-60 object-cover"
+         src="assets/img/school/livro-falado.png"
+         alt="Casarão"
+       />
+       <!-- Background overlay -->
+       <div
+         class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+       ></div>
+       <!-- Centralized text on hover -->
+       <div
+         class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+       >
+         <p class="text-white text-center text-lg font-medium px-4">
+           Setor de gravação de livros em áudio que também recebe voluntários
+         </p>
+       </div>
+       <!-- Default content -->
+       <div
+         class="p-4 flex flex-col items-center justify-between relative z-10"
+       >
+         <h3 class="text-lg font-medium text-txt group-hover:text-white">
+           Livro Falado
+         </h3>
+         <span
+           class="text-sm font-bold text-green-700 group-hover:text-white"
+         >
+           Conheça o projeto
+         </span>
+       </div>
+     </a>
+   </div>
+
+    <!-- MÚSICA -->
+    <div
+    class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+  >
+    <a class="cursor-pointer" (click)="navegar('musica')">
+      <img
+        class="w-full h-60 object-cover"
+        src="assets/img/school/musica-all.png"
+        alt="Casarão"
+      />
+      <!-- Background overlay -->
+      <div
+        class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+      ></div>
+      <!-- Centralized text on hover -->
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+      >
+        <p class="text-white text-center text-lg font-medium px-4">
+          Atividades, aulas e projetos com ensino de música
+        </p>
+      </div>
+      <!-- Default content -->
+      <div
+        class="p-4 flex flex-col items-center justify-between relative z-10"
+      >
+        <h3 class="text-lg font-medium text-txt group-hover:text-white">
+          Música
+        </h3>
+        <span
+          class="text-sm font-bold text-green-700 group-hover:text-white"
+        >
+          Conheça as atividades
+        </span>
+      </div>
+    </a>
   </div>
+
+  <!-- ESPORTE -->
+  <div
+  class="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden border border-primary-200"
+>
+  <a class="cursor-pointer" (click)="navegar('esporte')">
+    <img
+      class="w-full h-60 object-cover"
+      src="assets/img/school/esporte1.jpg"
+      alt="Casarão"
+    />
+    <!-- Background overlay -->
+    <div
+      class="absolute top-0 left-0 right-0 bottom-0 bg-green-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"
+    ></div>
+    <!-- Centralized text on hover -->
+    <div
+      class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 z-20"
+    >
+      <p class="text-white text-center text-lg font-medium px-4">
+        Atividades, aulas e projetos com esportes
+      </p>
+    </div>
+    <!-- Default content -->
+    <div
+      class="p-4 flex flex-col items-center justify-between relative z-10"
+    >
+      <h3 class="text-lg font-medium text-txt group-hover:text-white">
+        Esporte
+      </h3>
+      <span
+        class="text-sm font-bold text-green-700 group-hover:text-white"
+      >
+        Conheça as atividades
+      </span>
+    </div>
+  </a>
+</div>
+
+
+          
+    </div> <!--FIM div "conheça nossos serviços...""-->
+  </div> <!--FIM div dos cards-->
 </section>
