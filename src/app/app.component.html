@@ -2,15 +2,16 @@
   <router-outlet #outlet="outlet"></router-outlet>
 </main> -->
 
-<main 
+<!-- ISSO AQUI É UMA PISCADA QUE DÁ ANTES DE CARREGAR A PÁGINA, ESTOU COMENTANDO PQ NÃO FICOU LEGAL-->
+<!-- <main 
   [class.opacity-0]="isRouteChanging" 
   [class.opacity-100]="!isRouteChanging" 
   [class.blur-sm]="isRouteChanging"
   class="transition-all duration-300 ease-in-out">
   <router-outlet (activate)="onRouteChange()"></router-outlet>
-</main>
+</main> -->
 
-
+<router-outlet></router-outlet>
 
 
 
