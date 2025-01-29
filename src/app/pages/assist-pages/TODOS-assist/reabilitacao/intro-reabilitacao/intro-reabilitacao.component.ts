@@ -10,15 +10,6 @@ import * as AOS from 'aos';
   templateUrl: './intro-reabilitacao.component.html',
   styleUrl: './intro-reabilitacao.component.scss'
 })
-export class IntroReabilitacaoComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      AOS.init({
-        duration: 800, // Duração da animação em milissegundos
-        once: true,    // A animação será executada apenas uma vez
-      });
-    }
-  }
+export class IntroReabilitacaoComponent {
+  
 }
