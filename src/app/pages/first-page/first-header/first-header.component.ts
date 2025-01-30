@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavegacaoService } from '../../../services/navegacao.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DoacaoDialogComponent } from '../../../components/header-saude/header-saude.component';
@@ -16,6 +16,30 @@ import { DoacaoDialogComponent } from '../../../components/header-saude/header-s
 })
 export class FirstHeaderComponent {
 
+  isScrolled = false;
+  isHovering = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+    // Somente reduz a opacidade se o mouse NÃO estiver sobre o header
+    if (!this.isHovering) {
+      this.isScrolled = scrollTop > 50;
+    }
+  }
+
+  @HostListener('mouseenter')
+  onMouseEnter() {
+    this.isHovering = true;
+    this.isScrolled = false; // Força a opacidade normal no hover
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave() {
+    this.isHovering = false;
+    this.onWindowScroll(); // Reaplica a opacidade caso ainda esteja rolado
+  }
 
  
   isMenuOpen = false;
