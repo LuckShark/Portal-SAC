@@ -5,6 +5,7 @@ import { FirstHeaderComponent } from "../first-header/first-header.component";
 import { FirstCardsComponent } from "../first-cards/first-cards.component";
 import { FirstSliderComponent } from "../first-slider/first-slider.component";
 import { FirstFooterComponent } from "../first-footer/first-footer.component";
+import { FirstMapComponent } from "../first-map/first-map.component";
 
 
 @Component({
@@ -15,7 +16,8 @@ import { FirstFooterComponent } from "../first-footer/first-footer.component";
     FirstHeaderComponent,
     FirstCardsComponent,
     FirstSliderComponent,
-    FirstFooterComponent
+    FirstFooterComponent,
+    FirstMapComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
