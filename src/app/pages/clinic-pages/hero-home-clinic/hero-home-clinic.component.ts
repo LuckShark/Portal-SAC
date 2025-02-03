@@ -23,7 +23,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 })
 export class HeroHomeClinicComponent {
 
-  //ANIMAÇÃO DOS NÚMEROS SUBINDO 
+  //! ANIMAÇÃO DOS NÚMEROS SUBINDO NÃO MEXER !!!!!!!!
 
   numbers = [
     { label: 'Clientes atendidos', value: 10000, animatedValue: 0, prefix: '+' },
